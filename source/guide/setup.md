@@ -1,0 +1,57 @@
+---
+title: Setup
+date: 2018-06-03 19:13:32
+---
+
+scrollNav works by scanning the given [HTML Node Element](tktktk) for section
+landmarks, by default `h2` elements, that it then uses to generate the
+navigation.
+
+## Page markup
+
+The content should be wrapped in a container to avoid including unintended
+landmarks in the nav. If we were to look at a typical document, it might look
+like this:
+
+```html
+  <div class="main-content">
+    <h2>First section</h2>
+    ...
+    <h2>Second section</h2>
+    ...
+    <h2>Third section</h2>
+    ...
+  </div>
+```
+
+## Initialize
+
+Next, we'll save the `.main-content` container Node to a variable and then pass
+it on to scrollNav. In this example we'll use`.querySelector()` but you could
+also use `.getElementByID()` or`.getElementByClassName()`.
+
+```js
+const content = document.querySelector('.main-content');
+scrollNav.init(content);
+```
+
+scrollNav will then loop through the the `h2` elements, add an ID if they don't
+already have one, build the nav, and then inject it just before the
+`.main-content` Node. The result for our example document would look like this:
+
+```html
+<nav class="scroll-nav">
+  <ol class="scroll-nav__list">
+    <li class="scroll-nav__item">
+      <a class="scroll-nav__link" href="#scroll-nav__1">
+        First heading
+      <a>
+    </li>
+    ...
+  </ol>
+</nav>
+<div class="main-content">
+  <h2 id="scroll-nav__1">First Heading</h2>
+  ...
+</div>
+```
