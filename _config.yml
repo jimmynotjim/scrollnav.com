@@ -3,17 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: scrollnav.js
 subtitle:
 description:
 keywords:
-author: John Doe
+author: James Wilson
 language:
 timezone:
+current_version: 3.0.0
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://scrollnav.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -39,10 +40,20 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
-  line_number: true
-  auto_detect: false
-  tab_replace:
+  enable: false
+
+marked:
+  gfm: true
+  breaks: false
+  tables: true
+  smartypants: true
+  autolink: true
+  modifyAnchors: 1
+
+prism_plugin:
+  mode: 'preprocess'
+  theme: 'base16-ateliersulphurpool.light'
+  #custom_css: 'path/to/your/custom.css'
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -73,17 +84,9 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: scrollnav
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
-
-marked:
-  gfm: true
-  breaks: false
-  tables: true
-  smartypants: true
-  autolink: true
-  modifyAnchors: 1

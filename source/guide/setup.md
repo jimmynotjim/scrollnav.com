@@ -1,6 +1,7 @@
 ---
 title: Setup
-date: 2018-06-03 19:13:32
+type: guide
+order: 3
 ---
 
 scrollNav works by scanning the given [HTML Node Element](tktktk) for section
