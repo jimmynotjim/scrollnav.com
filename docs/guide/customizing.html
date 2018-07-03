@@ -1,0 +1,414 @@
+<!doctype html>
+
+<!--[if lt IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie10 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    Customizing | scrollnav.js
+  </title>
+
+  <meta name="description" content="scrollnav includes some default settings that work for most situations, but if your project requires a bit more customization, scrollnav can most likely meet those. To modify either, pass in a single">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Customizing">
+<meta property="og:url" content="http://scrollnav.com/guide/customizing.html">
+<meta property="og:site_name" content="scrollnav.js">
+<meta property="og:description" content="scrollnav includes some default settings that work for most situations, but if your project requires a bit more customization, scrollnav can most likely meet those. To modify either, pass in a single">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-03T19:59:41.117Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Customizing">
+<meta name="twitter:description" content="scrollnav includes some default settings that work for most situations, but if your project requires a bit more customization, scrollnav can most likely meet those. To modify either, pass in a single">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,700" rel="stylesheet">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Twitter bootstrap (via cdn) -->
+  
+<link rel="stylesheet" href="/css/prism-base16-ateliersulphurpool.light.css" type="text/css"></head>
+
+
+  <body>
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-logo"
+       href="/">
+       <span class="site-logo__text"><strong>scrollnav</strong>.js</span>
+    </a>
+    <nav class="site-nav">
+      <ul class="unstyled-list site-nav__list">
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="/guide/">Guide</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="/examples/">Examples</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="/contribute/">Contribute</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main class="container
+                 container--has-sidebar
+                 wrapper">
+      
+  <div class="sidebar">
+  <div class="sidebar__inner">
+    <header class="sidebar__header">
+      <h2 class="sidebar__heading">
+        Guide
+      </h2>
+      <span class="sidebar__small">
+        Ver. 3.0.0
+      </span>
+    </header>
+    <nav class="toc">
+  <ol class="toc__list unstyled-list">
+    
+      <li class="toc__item">
+        <a href="/guide/index.html"
+           class="toc__link">
+          Overview
+        </a>
+      </li>
+    
+      <li class="toc__item">
+        <a href="/guide/installing.html"
+           class="toc__link">
+          Installing
+        </a>
+      </li>
+    
+      <li class="toc__item">
+        <a href="/guide/setup.html"
+           class="toc__link">
+          Setup
+        </a>
+      </li>
+    
+      <li class="toc__item">
+        <a href="/guide/styling.html"
+           class="toc__link">
+          Styling
+        </a>
+      </li>
+    
+      <li class="toc__item current">
+        <a href="/guide/customizing.html"
+           class="toc__link">
+          Customizing
+        </a>
+      </li>
+    
+  </ol>
+</nav>
+
+  </div>
+</div>
+
+
+
+<article class="article article-type-page"
+         id="page-customizing"
+         itemscope
+         itemprop="blogPost">
+
+  <div class="article-meta">
+    
+    
+  </div>
+
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Customizing
+    </h1>
+  
+
+
+      </header>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>scrollnav includes some default settings that work for most situations, but if
+your project requires a bit more customization, scrollnav can most likely meet
+those. To modify either, pass in a single object (include settings and options
+as one object) as the second argument like this:</p>
+<pre class=" language-js"><code class="language-js">  scrollnav<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>content<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    key<span class="token punctuation">:</span> value
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="default-settings"><a href="#default-settings" class="headerlink" title="Default settings"></a>Default settings</h2><p>The following settings are editable to overwrite the default.</p>
+<pre class=" language-js"><code class="language-js"><span class="token punctuation">{</span>
+  sections<span class="token punctuation">:</span> <span class="token string">'selector'</span><span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">// string</span>
+  <span class="token comment" spellcheck="true">//</span>
+  <span class="token comment" spellcheck="true">// Sets the querySelector for the content's section landmarks, by default</span>
+  <span class="token comment" spellcheck="true">// it's 'h2'.</span>
+
+  insertTarget<span class="token punctuation">:</span> targetNode<span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">// HTML Node</span>
+  <span class="token comment" spellcheck="true">//</span>
+  <span class="token comment" spellcheck="true">// Sets the target Node for injecting the navigation, by default it's the</span>
+  <span class="token comment" spellcheck="true">// content Node passed to scrollnav.</span>
+
+  insertLocation<span class="token punctuation">:</span> <span class="token string">'relativeLocation'</span>
+  <span class="token comment" spellcheck="true">// string</span>
+  <span class="token comment" spellcheck="true">//</span>
+  <span class="token comment" spellcheck="true">// Sets the injection location relative to the insertTarget, by default it's</span>
+  <span class="token comment" spellcheck="true">// 'before'.</span>
+  <span class="token comment" spellcheck="true">//</span>
+  <span class="token comment" spellcheck="true">// available options are 'append', 'prepend', 'after', or 'before'</span>
+
+  easingStyle<span class="token punctuation">:</span> <span class="token string">'easingName'</span><span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">// string</span>
+  <span class="token comment" spellcheck="true">//</span>
+  <span class="token comment" spellcheck="true">// Sets the easing type for the scroll animation that is triggered by the</span>
+  <span class="token comment" spellcheck="true">// click event on a nav item, by default it's 'easeOutQuad'.</span>
+  <span class="token comment" spellcheck="true">//</span>
+  <span class="token comment" spellcheck="true">// available options are 'linear' 'easeInQuad', 'easeOutQuad',</span>
+  <span class="token comment" spellcheck="true">// 'easeInOutQuad', 'easeInCubic', 'easeOutCubic', 'easeInOutCubic',</span>
+  <span class="token comment" spellcheck="true">// 'easeInQuart', 'easeOutQuart', 'easeInOutQuart', 'easeInQuint',</span>
+  <span class="token comment" spellcheck="true">// 'easeOutQuint', easeInOutQuint</span>
+
+  updateHistory<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  <span class="token comment" spellcheck="true">// boolean</span>
+  <span class="token comment" spellcheck="true">//</span>
+  <span class="token comment" spellcheck="true">// Sets the history behavior when a nav item is clicked, by default it's true</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="additional-options"><a href="#additional-options" class="headerlink" title="Additional options"></a>Additional options</h2><p>These additional options are editable but are not set by default.</p>
+<pre class=" language-js"><code class="language-js"><span class="token punctuation">{</span>
+  subSections<span class="token punctuation">:</span> <span class="token string">'...'</span><span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">// string</span>
+  <span class="token comment" spellcheck="true">//</span>
+  <span class="token comment" spellcheck="true">// Sets the querySelector for the content's sub-section landmarks.</span>
+
+  onScroll<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">// function</span>
+  <span class="token comment" spellcheck="true">//</span>
+  <span class="token comment" spellcheck="true">// Sets the callback to be triggered after the window scrolls when triggered</span>
+  <span class="token comment" spellcheck="true">// by the click event on a nav item.</span>
+
+  onInit<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">// function</span>
+  <span class="token comment" spellcheck="true">//</span>
+  <span class="token comment" spellcheck="true">// Sets the callback to be triggered after the .init() method has completed.</span>
+
+  onUpdatePositions<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">// function</span>
+  <span class="token comment" spellcheck="true">//</span>
+  <span class="token comment" spellcheck="true">// Sets the callback to be triggered after the .updatePositions() method</span>
+  <span class="token comment" spellcheck="true">// has completed.</span>
+
+  onDestroy<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">// function</span>
+  <span class="token comment" spellcheck="true">//</span>
+  <span class="token comment" spellcheck="true">// Sets the callback to be triggered after the .destroy() method has</span>
+  <span class="token comment" spellcheck="true">// completed.</span>
+
+  debug<span class="token punctuation">:</span> <span class="token boolean">false</span>
+  <span class="token comment" spellcheck="true">// boolean</span>
+  <span class="token comment" spellcheck="true">//</span>
+  <span class="token comment" spellcheck="true">// Enables scrollnav's built in debug mode to log errors to the console and</span>
+  <span class="token comment" spellcheck="true">// display the active area threshold on screen, helpful for when you've hit a</span>
+  <span class="token comment" spellcheck="true">// snag you can't easily identify.</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="available-methods"><a href="#available-methods" class="headerlink" title="Available methods"></a>Available methods</h2><p>In addition to the <code>.init()</code> method scrollnav provides two additional public
+methods.</p>
+<h3 id="destroy"><a href="#destroy" class="headerlink" title="destroy()"></a>destroy()</h3><p>To remove the current instance of scrollnav call the destroy method. If you
+need to trigger a callback after scrollnav has been removed, use the
+<code>onDestroy</code> option described above (passed either in the original init or with
+the destroy method).</p>
+<pre class=" language-js"><code class="language-js">scrollnav<span class="token punctuation">.</span><span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="updatepositions"><a href="#updatepositions" class="headerlink" title="updatePositions()"></a>updatePositions()</h3><p>scrollnav doesn’t track outside DOM changes. If your page’s content is dynamic
+and updates after scrollnav is initialized you’ll need to recalcuate the
+position data with the updatePositions method. If you need to trigger a
+callback after the position data has been recalculated, use the
+<code>onUpdatePositions</code> option described above (passed either in the original init
+or with the updatePositions method).</p>
+<pre class=" language-js"><code class="language-js">scrollnav<span class="token punctuation">.</span><span class="token function">updatePositions</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+      
+
+      
+        
+
+
+
+
+  
+  <nav class="pagination">
+    <div class="pagination__prev">
+      
+        <a class="btn btn--outline pagination__link" href="/guide/styling.html" id="article-nav-newer">
+          &larr;
+          <span class="pagination__text">Prev</span>
+        </a>
+      
+    </div>
+    <div class="pagination__next">
+      
+    </div>
+  </nav>
+
+
+      
+    </div>
+
+    <footer class="article-footer">
+      Found a mistake or want to help improve this documentation?
+      <a href="https://github.com/jimmynotjim/scrollnav.com/edit/hexo/source/guide/customizing.md"
+         target="_blank">Edit this page right from GitHub</a>.
+    </footer>
+  </div>
+
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <nav class="footer-nav">
+      <section>
+        <h3 class="footer-nav__heading">Guide</h3>
+        <ul class="unstyled-list">
+          
+            <li class="footer-nav__item">
+              <a href="/guide/index.html"
+                 class="footer-nav__link">
+                Overview
+              </a>
+            </li>
+          
+            <li class="footer-nav__item">
+              <a href="/guide/installing.html"
+                 class="footer-nav__link">
+                Installing
+              </a>
+            </li>
+          
+            <li class="footer-nav__item">
+              <a href="/guide/setup.html"
+                 class="footer-nav__link">
+                Setup
+              </a>
+            </li>
+          
+            <li class="footer-nav__item">
+              <a href="/guide/styling.html"
+                 class="footer-nav__link">
+                Styling
+              </a>
+            </li>
+          
+            <li class="footer-nav__item">
+              <a href="/guide/customizing.html"
+                 class="footer-nav__link">
+                Customizing
+              </a>
+            </li>
+          
+            <li class="footer-nav__item">
+              <a href="/guide/troubleshooting.html"
+                 class="footer-nav__link">
+                Troubleshooting
+              </a>
+            </li>
+          
+            <li class="footer-nav__item">
+              <a href="/guide/upgrade-from-v2.html"
+                 class="footer-nav__link">
+                Upgrade from v2
+              </a>
+            </li>
+          
+        </ul>
+      </section>
+      <section>
+        <h3 class="footer-nav__heading">Resources</h3>
+        <ul class="unstyled-list">
+          <li class="footer-nav__item">
+            View the demos
+          </li>
+          <li class="footer-nav__item">
+            Ask a question
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="https://github.com/jimmynotjim/scrollNav/issues/new">
+              Report an issue
+            </a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="https://github.com/jimmynotjim/scrollNav">
+              View the source code
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3 class="footer-nav__heading">More</h3>
+        <ul class="unstyled-list">
+          <li class="footer-nav__item">
+            Lend a hand
+          </li>
+          <li class="footer-nav__item">
+            Make a donation
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="https://github.com/jimmynotjim/scrollnav.com">View this docsite's source code</a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="/v2/">View the v2 documentation</a>
+          </li>
+        </ul>
+      </section>
+    </nav>
+    <div class="footer-meta">
+      <p>scrollNav.js is built and maintained by James Wilson <a href="https://github.com/jimmynotjim/">(@jimmynotjim)</a></p>
+      <p>Copyright 2012-2018, released under <a href="https://opensource.org/licenses/MIT">the MIT license</a></p>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://rawgit.com/jimmynotjim/scrollNav/v3.0.0/dist/scrollNav.min.umd.js"></script>
+  <script>
+    const content = document.querySelector('.article-entry');
+    const sidebarCurrent = document.querySelector('.toc__item.current');
+    scrollNav.init(content, {
+      insertTarget: sidebarCurrent,
+      insertLocation: 'append'
+    });
+  </script>
+
+
+  </body>
+
+</html>

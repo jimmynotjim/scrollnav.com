@@ -1,0 +1,353 @@
+<!doctype html>
+
+<!--[if lt IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie10 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    Installing | scrollnav.js
+  </title>
+
+  <meta name="description" content="The compiled, production ready plugin is available in the /dist directory. Only use the code in the /src directory if you plan to compile the plugin from source as part of your project’s build process">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Installing">
+<meta property="og:url" content="http://scrollnav.com/guide/installing.html">
+<meta property="og:site_name" content="scrollnav.js">
+<meta property="og:description" content="The compiled, production ready plugin is available in the /dist directory. Only use the code in the /src directory if you plan to compile the plugin from source as part of your project’s build process">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-03T19:59:41.118Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Installing">
+<meta name="twitter:description" content="The compiled, production ready plugin is available in the /dist directory. Only use the code in the /src directory if you plan to compile the plugin from source as part of your project’s build process">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,700" rel="stylesheet">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Twitter bootstrap (via cdn) -->
+  
+<link rel="stylesheet" href="/css/prism-base16-ateliersulphurpool.light.css" type="text/css"></head>
+
+
+  <body>
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-logo"
+       href="/">
+       <span class="site-logo__text"><strong>scrollnav</strong>.js</span>
+    </a>
+    <nav class="site-nav">
+      <ul class="unstyled-list site-nav__list">
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="/guide/">Guide</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="/examples/">Examples</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="/contribute/">Contribute</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main class="container
+                 container--has-sidebar
+                 wrapper">
+      
+  <div class="sidebar">
+  <div class="sidebar__inner">
+    <header class="sidebar__header">
+      <h2 class="sidebar__heading">
+        Guide
+      </h2>
+      <span class="sidebar__small">
+        Ver. 3.0.0
+      </span>
+    </header>
+    <nav class="toc">
+  <ol class="toc__list unstyled-list">
+    
+      <li class="toc__item">
+        <a href="/guide/index.html"
+           class="toc__link">
+          Overview
+        </a>
+      </li>
+    
+      <li class="toc__item current">
+        <a href="/guide/installing.html"
+           class="toc__link">
+          Installing
+        </a>
+      </li>
+    
+      <li class="toc__item">
+        <a href="/guide/setup.html"
+           class="toc__link">
+          Setup
+        </a>
+      </li>
+    
+      <li class="toc__item">
+        <a href="/guide/styling.html"
+           class="toc__link">
+          Styling
+        </a>
+      </li>
+    
+      <li class="toc__item">
+        <a href="/guide/customizing.html"
+           class="toc__link">
+          Customizing
+        </a>
+      </li>
+    
+  </ol>
+</nav>
+
+  </div>
+</div>
+
+
+
+<article class="article article-type-page"
+         id="page-installing"
+         itemscope
+         itemprop="blogPost">
+
+  <div class="article-meta">
+    
+    
+  </div>
+
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Installing
+    </h1>
+  
+
+
+      </header>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>The compiled, production ready plugin is available in the <code>/dist</code> directory.
+Only use the code in the <code>/src</code> directory if you plan to compile the plugin from
+source as part of your project’s build process.</p>
+<p class="article-note"><em>Building from source assumes an intermediate level of
+knowledge about build tooling. If you have trouble compiling the plugin on your
+own please use the provided <code>/dist</code> files or seek help from Stack Overflow.</em></p>
+
+<h2 id="include-directly"><a href="#include-directly" class="headerlink" title="Include directly"></a>Include directly</h2><p>Include the minified Universal Module Definition (UMD) files as a script tag to
+register scrollnav as a global variable.</p>
+<h3 id="manual"><a href="#manual" class="headerlink" title="Manual"></a>Manual</h3><p><a class="btn btn--outline" href="https://unpkg.com/scrollnav@3.0.0/dist/scrollnav.umd.min.js" title="Download scrollnav from unpkg.com" target="_blank" rel="noopener">
+  Download scrollnav v3.0.0
+</a></p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>[your assets directory]/scrollnav.umd.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+</code></pre>
+<h3 id="cdn"><a href="#cdn" class="headerlink" title="CDN"></a>CDN</h3><p>If you want to leverage the speed and distribution of a CDN scrollnav is
+available on <a href="https://unpkg.com/scrollnav@3.0.0/" target="_blank" rel="noopener">unpkg</a> and
+<a href="https://cdn.jsdelivr.net/npm/scrollnav@3.0.0/" target="_blank" rel="noopener">jsdelivr</a>. The URL is pinned to
+v3.0.0 so you’ll need to update the script tag whenever a new version is released.</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://unpkg.com/scrollnav@3.0.0/dist/scrollnav.umd.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+</code></pre>
+<h2 id="package-manager"><a href="#package-manager" class="headerlink" title="Package manager"></a>Package manager</h2><p>Install with <a href="tktktk">Yarn</a></p>
+<pre class=" language-bash"><code class="language-bash">yarn add scrollnav
+</code></pre>
+<p>Install with <a href="tktktk">NPM</a></p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> scrollnav
+</code></pre>
+<p>Install with <a href="tktktk">Bower</a></p>
+<pre class=" language-bash"><code class="language-bash">bower <span class="token function">install</span> scrollnav --save
+</code></pre>
+<p class="article-note"><em>The folks from Bower no longer recommend using Bower.
+Luckily they’ve created
+<a href="https://bower.io/blog/2017/how-to-migrate-away-from-bower/" target="_blank" rel="noopener">a guide to migrating to Yarn</a>.</em>
+</p>
+
+      
+
+      
+        
+
+
+
+
+  
+    <h4>Next up, Setup.</h4>
+  
+  <nav class="pagination">
+    <div class="pagination__prev">
+      
+        <a class="btn btn--outline pagination__link" href="/guide/index.html" id="article-nav-newer">
+          &larr;
+          <span class="pagination__text">Prev</span>
+        </a>
+      
+    </div>
+    <div class="pagination__next">
+      
+        <a class="btn btn--outline pagination__link" href="/guide/setup.html" id="article-nav-older">
+          <span class="pagination__text">Next</span>
+          &rarr;
+        </a>
+      
+    </div>
+  </nav>
+
+
+      
+    </div>
+
+    <footer class="article-footer">
+      Found a mistake or want to help improve this documentation?
+      <a href="https://github.com/jimmynotjim/scrollnav.com/edit/hexo/source/guide/installing.md"
+         target="_blank">Edit this page right from GitHub</a>.
+    </footer>
+  </div>
+
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <nav class="footer-nav">
+      <section>
+        <h3 class="footer-nav__heading">Guide</h3>
+        <ul class="unstyled-list">
+          
+            <li class="footer-nav__item">
+              <a href="/guide/index.html"
+                 class="footer-nav__link">
+                Overview
+              </a>
+            </li>
+          
+            <li class="footer-nav__item">
+              <a href="/guide/installing.html"
+                 class="footer-nav__link">
+                Installing
+              </a>
+            </li>
+          
+            <li class="footer-nav__item">
+              <a href="/guide/setup.html"
+                 class="footer-nav__link">
+                Setup
+              </a>
+            </li>
+          
+            <li class="footer-nav__item">
+              <a href="/guide/styling.html"
+                 class="footer-nav__link">
+                Styling
+              </a>
+            </li>
+          
+            <li class="footer-nav__item">
+              <a href="/guide/customizing.html"
+                 class="footer-nav__link">
+                Customizing
+              </a>
+            </li>
+          
+            <li class="footer-nav__item">
+              <a href="/guide/troubleshooting.html"
+                 class="footer-nav__link">
+                Troubleshooting
+              </a>
+            </li>
+          
+            <li class="footer-nav__item">
+              <a href="/guide/upgrade-from-v2.html"
+                 class="footer-nav__link">
+                Upgrade from v2
+              </a>
+            </li>
+          
+        </ul>
+      </section>
+      <section>
+        <h3 class="footer-nav__heading">Resources</h3>
+        <ul class="unstyled-list">
+          <li class="footer-nav__item">
+            View the demos
+          </li>
+          <li class="footer-nav__item">
+            Ask a question
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="https://github.com/jimmynotjim/scrollNav/issues/new">
+              Report an issue
+            </a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="https://github.com/jimmynotjim/scrollNav">
+              View the source code
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3 class="footer-nav__heading">More</h3>
+        <ul class="unstyled-list">
+          <li class="footer-nav__item">
+            Lend a hand
+          </li>
+          <li class="footer-nav__item">
+            Make a donation
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="https://github.com/jimmynotjim/scrollnav.com">View this docsite's source code</a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="/v2/">View the v2 documentation</a>
+          </li>
+        </ul>
+      </section>
+    </nav>
+    <div class="footer-meta">
+      <p>scrollNav.js is built and maintained by James Wilson <a href="https://github.com/jimmynotjim/">(@jimmynotjim)</a></p>
+      <p>Copyright 2012-2018, released under <a href="https://opensource.org/licenses/MIT">the MIT license</a></p>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://rawgit.com/jimmynotjim/scrollNav/v3.0.0/dist/scrollNav.min.umd.js"></script>
+  <script>
+    const content = document.querySelector('.article-entry');
+    const sidebarCurrent = document.querySelector('.toc__item.current');
+    scrollNav.init(content, {
+      insertTarget: sidebarCurrent,
+      insertLocation: 'append'
+    });
+  </script>
+
+
+  </body>
+
+</html>
