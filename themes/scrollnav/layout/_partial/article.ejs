@@ -1,0 +1,47 @@
+<% if (page.type) { %>
+  <%- partial('post/sidebar', { type: page.type }) %>
+<% } %>
+
+<article class="article article-type-<%= post.layout %>"
+         id="<%= post.layout %>-<%= post.slug %>"
+         itemscope
+         itemprop="blogPost">
+
+  <div class="article-meta">
+    <%# partial('post/date', {class_name: 'article-date', date_format: null}) %>
+    <%# partial('post/category') %>
+  </div>
+
+  <div class="article-inner">
+
+    <% if (post.link || post.title){ %>
+      <header class="article-header">
+        <%- partial('post/title', {class_name: 'article-title'}) %>
+      </header>
+    <% } %>
+
+    <div class="article-entry" itemprop="articleBody">
+      <% if (post.excerpt && index){ %>
+        <%- post.excerpt %>
+        <% if (theme.excerpt_link){ %>
+          <p class="article-more-link">
+            <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+          </p>
+        <% } %>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
+
+      <% if (post.type === 'guide') { %>
+        <%- partial('post/pagination') %>
+      <% } %>
+    </div>
+
+    <footer class="article-footer">
+      Found a mistake or want to help improve this documentation?
+      <a href="https://github.com/jimmynotjim/scrollnav.com/edit/hexo/source/<%- page.path.replace(/\.html$/, '.md') %>"
+         target="_blank">Edit this page right from GitHub</a>.
+    </footer>
+  </div>
+
+</article>

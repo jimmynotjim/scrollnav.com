@@ -1,0 +1,39 @@
+<% if (!post.prev) {
+  post.prev = site.pages.find({
+    type: page.type,
+    draft: undefined,
+    order: { $lt: page.order }
+  }).sort({ order: -1 }).first();
+} %>
+
+<% if (!post.next) {
+  post.next = site.pages.find({
+    type: page.type,
+    draft: undefined,
+    order: { $gt: page.order }
+  }).sort({ order: 1 }).first();
+} %>
+
+<% if (post.prev || post.next) { %>
+  <% if (post.next) { %>
+    <h4>Next up, <%= post.next.title %>.</h4>
+  <% } %>
+  <nav class="pagination">
+    <div class="pagination__prev">
+      <% if (post.prev && post.prev.title) { %>
+        <a class="btn btn--outline pagination__link" href="<%- url_for(post.prev.path) %>" id="article-nav-newer">
+          &larr;
+          <span class="pagination__text"><%# post.prev.title %>Prev</span>
+        </a>
+      <% } %>
+    </div>
+    <div class="pagination__next">
+      <% if (post.next && post.next.title) { %>
+        <a class="btn btn--outline pagination__link" href="<%- url_for(post.next.path) %>" id="article-nav-older">
+          <span class="pagination__text"><%# post.next.title %>Next</span>
+          &rarr;
+        </a>
+      <% } %>
+    </div>
+  </nav>
+<% } %>

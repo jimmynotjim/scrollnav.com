@@ -1,17 +1,17 @@
 ---
-title: Install
-slug: install
+title: Installing
+slug: installing
 type: guide
 order: 2
 ---
 
-The compiled, production ready plugin is available in the `dist` directory.
-Only use the code in the `src` directory if you plan to compile the plugin from
+The compiled, production ready plugin is available in the `/dist` directory.
+Only use the code in the `/src` directory if you plan to compile the plugin from
 source as part of your project's build process.
 
-_Note: Building from source assumes an intermediate level of knowledge about
-build tooling. If you have trouble compiling the plugin on your own please use
-the provided compiled files or seek help from Stack Overflow._
+<p class="article-note">_Building from source assumes an intermediate level of
+knowledge about build tooling. If you have trouble compiling the plugin on your
+own please use the provided `/dist` files or seek help from Stack Overflow._</p>
 
 ## Include directly
 
@@ -42,10 +42,6 @@ v3.0.0 so you'll need to update the script tag whenever a new version is release
 
 ## Package manager
 
-*Note: The NPM registry does not allow for capital letters in package names, be
-sure to use all lowercase `scrollnav` when searching for or installing
-scrollnav from NPM, Yarn, or unpkg*
-
 Install with [Yarn](tktktk)
 
 ```bash
@@ -64,6 +60,7 @@ Install with [Bower](tktktk)
 bower install scrollnav --save
 ```
 
-_Note: The folks from Bower no longer recommend using Bower. Luckily they've
-provided
-[a guide on how to migrate to Yarn](https://bower.io/blog/2017/how-to-migrate-away-from-bower/)._
+<p class="article-note">_The folks from Bower no longer recommend using Bower.
+Luckily they've created
+[a guide to migrating to Yarn](https://bower.io/blog/2017/how-to-migrate-away-from-bower/)._
+</p>

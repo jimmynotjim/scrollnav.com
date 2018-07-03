@@ -1,0 +1,73 @@
+<footer class="site-footer">
+  <div class="wrapper">
+    <nav class="footer-nav">
+      <section>
+        <h3 class="footer-nav__heading">Guide</h3>
+        <ul class="unstyled-list">
+          <% site.pages.find({type: 'guide'}).sort('order').each( p => { %>
+            <li class="footer-nav__item">
+              <a href="<%- url_for(p.path) %>"
+                 class="footer-nav__link">
+                <%- p.title %>
+              </a>
+            </li>
+          <% }) %>
+        </ul>
+      </section>
+      <section>
+        <h3 class="footer-nav__heading">Resources</h3>
+        <ul class="unstyled-list">
+          <li class="footer-nav__item">
+            View the demos
+          </li>
+          <li class="footer-nav__item">
+            Ask a question
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="https://github.com/jimmynotjim/scrollNav/issues/new">
+              Report an issue
+            </a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="https://github.com/jimmynotjim/scrollNav">
+              View the source code
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3 class="footer-nav__heading">More</h3>
+        <ul class="unstyled-list">
+          <li class="footer-nav__item">
+            Lend a hand
+          </li>
+          <li class="footer-nav__item">
+            Make a donation
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="https://github.com/jimmynotjim/scrollnav.com">View this docsite's source code</a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="/v2/">View the v2 documentation</a>
+          </li>
+        </ul>
+      </section>
+    </nav>
+    <div class="footer-meta">
+      <p>scrollNav.js is built and maintained by James Wilson <a href="https://github.com/jimmynotjim/">(@jimmynotjim)</a></p>
+      <p>Copyright 2012-2018, released under <a href="https://opensource.org/licenses/MIT">the MIT license</a></p>
+    </div>
+  </div>
+</footer>
+
+<% if ( page.type === 'guide' ) { %>
+  <script src="https://rawgit.com/jimmynotjim/scrollNav/v3.0.0/dist/scrollNav.min.umd.js"></script>
+  <script>
+    const content = document.querySelector('.article-entry');
+    const sidebarCurrent = document.querySelector('.toc__item.current');
+    scrollNav.init(content, {
+      insertTarget: sidebarCurrent,
+      insertLocation: 'append'
+    });
+  </script>
+<% } %>

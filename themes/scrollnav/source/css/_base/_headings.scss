@@ -1,0 +1,81 @@
+/*------------------------------------*\
+    $HEADINGS
+\*------------------------------------*/
+/**
+ * As per: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
+ *
+ * When we define a heading we also define a corresponding class to go with it.
+ * This allows us to apply, say, `class=alpha` to a `h3`; a double-stranded
+ * heading hierarchy.
+ */
+h1, h2, h3, h4, h5, h6 {
+  color: $color-text-dark;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: em($size-i, $base-font-size);
+  margin-bottom: em($base-spacing-unit * 2, $size-i);
+
+  p + &,
+  blockquote + &,
+  pre + & {
+    margin-top: em($base-spacing-unit * 3, $size-i)px;
+  }
+}
+
+h2 {
+  font-size: em($size-ii, $base-font-size);
+  margin-bottom: em($base-spacing-unit * 2, $size-ii);
+
+  p + &,
+  blockquote + &,
+  pre + & {
+    margin-top: em($base-spacing-unit * 3, $size-ii);
+  }
+}
+
+h3 {
+  font-size: em($size-iii, $base-font-size);
+  margin-bottom: em($base-spacing-unit * 2, $size-iii);
+
+  p + &,
+  blockquote + &,
+  pre + & {
+    margin-top: em($base-spacing-unit * 3, $size-iii);
+  }
+}
+
+h4 {
+  font-size: em($size-iv, $base-font-size);
+  margin-bottom: em($base-spacing-unit * 2, $size-iv);
+
+  p + &,
+  blockquote + &,
+  pre + & {
+    margin-top: em($base-spacing-unit * 3, $size-iv);
+  }
+}
+
+h5 {
+  font-size: em($size-v, $base-font-size);
+  margin-bottom: em($base-spacing-unit * 2, $size-v);
+
+  p + &,
+  blockquote + &,
+  pre + & {
+    margin-top: em($base-spacing-unit * 3, $size-v);
+  }
+}
+
+h6 {
+  font-size: em($size-vi, $base-font-size);
+  margin-bottom: em($base-spacing-unit * 2, $size-vi);
+
+  p + &,
+  blockquote + &,
+  pre + & {
+    margin-top: em($base-spacing-unit * 3, $size-vi);
+  }
+}
