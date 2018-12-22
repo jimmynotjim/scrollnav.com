@@ -4,7 +4,7 @@
       <section>
         <h3 class="footer-nav__heading">Guide</h3>
         <ul class="unstyled-list">
-          <% site.pages.find({type: 'guide'}).sort('order').each( p => { %>
+          <% site.pages.find({type: 'guide', draft: undefined}).sort('order').each( p => { %>
             <li class="footer-nav__item">
               <a href="<%- url_for(p.path) %>"
                  class="footer-nav__link">
@@ -18,10 +18,14 @@
         <h3 class="footer-nav__heading">Resources</h3>
         <ul class="unstyled-list">
           <li class="footer-nav__item">
-            View the demos
+            <a class="footer-nav__link" href="https://codepen.io/collection/XPjqyK/">
+              View the demos
+            </a>
           </li>
           <li class="footer-nav__item">
-            Ask a question
+            <a class="footer-nav__link" href="https://stackoverflow.com/search?tab=newest&q=scrollnav.js">
+              Get some help
+            </a>
           </li>
           <li class="footer-nav__item">
             <a class="footer-nav__link" href="https://github.com/jimmynotjim/scrollNav/issues/new">
@@ -39,16 +43,24 @@
         <h3 class="footer-nav__heading">More</h3>
         <ul class="unstyled-list">
           <li class="footer-nav__item">
-            Lend a hand
+              <a class="footer-nav__link" href="https://github.com/jimmynotjim/scrollNav/blob/master/CONTRIBUTING.md">
+                Lend a hand
+            </a>
           </li>
           <li class="footer-nav__item">
-            Make a donation
+            <a class="footer-nav__link" href="https://www.paypal.me/jimmynotjim">
+              Make a donation
+            </a>
           </li>
           <li class="footer-nav__item">
-            <a class="footer-nav__link" href="https://github.com/jimmynotjim/scrollnav.com">View this docsite's source code</a>
+            <a class="footer-nav__link" href="https://github.com/jimmynotjim/scrollnav.com">
+              View this docsite's source code
+            </a>
           </li>
           <li class="footer-nav__item">
-            <a class="footer-nav__link" href="/v2/">View the v2 documentation</a>
+            <a class="footer-nav__link" href="/v2/">
+              View the v2 documentation
+            </a>
           </li>
         </ul>
       </section>
@@ -69,5 +81,23 @@
       insertTarget: sidebarCurrent,
       insertLocation: 'append'
     });
+  </script>
+<% } %>
+
+<% if ( page.type === 'v2' ) { %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="https://rawgit.com/jimmynotjim/scrollNav/v2.7.3/dist/jquery.scrollNav.min.js"></script>
+  <script>
+    $('.article-inner').scrollNav({
+			headlineText: 'scrollNav',
+			fixedMargin: 60,
+			scrollOffset: 80,
+      arrowKeys: false,
+      insertTarget: $('.sidebar__inner'),
+      insertLocation: 'appendTo',
+      showTopLink: false,
+      showHeadline: false,
+      className: 'v2-toc'
+		});
   </script>
 <% } %>

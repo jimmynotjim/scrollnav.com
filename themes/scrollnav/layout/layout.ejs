@@ -12,8 +12,11 @@
     <%- partial('_partial/header') %>
 
     <main class="container
-                 <%= page.type === 'guide' ? 'container--has-sidebar' : '' %>
-                 wrapper">
+                 <%= page.type === 'guide' &&'container--has-sidebar' %>
+                 <%= page.type === 'v2' &&'container--has-sidebar' %>
+                 <%= page.__index && 'container--home' %>
+                 <%= !page.__index && 'wrapper' %>"
+    >
       <%- body %>
     </main>
 

@@ -32,18 +32,20 @@ to compile the plugin from source as part of your project's build process.
 <p class="article-note">_Building from source assumes an intermediate level of
 knowledge about build tooling. If you have trouble compiling the plugin on your
 own please use the provided compiled files or seek help from
-[Stack Overflow](tktktk)_</p>
+[Stack Overflow](https://stackoverflow.com/search?tab=newest&q=scrollnav.js)_
+</p>
 
 ## Changelog
 
 v3.0.0 is the current stable release. For detailed changes in each release
-please refer to the [release notes](tktktk). Be sure you
+please refer to the [release notes](tkthttps://github.com/jimmynotjim/scrollNav/releasesktk). Be sure you
 [understand the changes](tktktk) before updating, v3 is a complete re-write of
 the library and requires a small amount of manual work to udpate from v2.
 
 ## License
 
 scrollnav is Copyright &copy; 2012-2018 by James Wilson (aka
-[@jimmynotjim](tktktk)), released under the
-[MIT license](tktktk). This means you can re-create, edit or share the plugin
-as long as you maintain the same open licensing.
+[@jimmynotjim](https://github.com/jimmynotjim)), released under the
+[MIT license](https://github.com/jimmynotjim/scrollNav/blob/master/LICENSE-MIT).
+This means you can re-create, edit or share the plugin as long as you maintain
+the same open licensing.

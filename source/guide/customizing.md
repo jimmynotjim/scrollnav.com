@@ -7,8 +7,8 @@ order: 5
 
 scrollnav includes some default settings that work for most situations, but if
 your project requires a bit more customization, scrollnav can most likely meet
-those. To modify either, pass in a single object (include settings and options
-as one object) as the second argument like this:
+those. To modify the settings or set your own options, pass in a single object
+as the second argument like this:
 
 ```js
   scrollnav.init(content, {

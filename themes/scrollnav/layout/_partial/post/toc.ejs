@@ -1,12 +1,14 @@
-<nav class="toc">
-  <ol class="toc__list unstyled-list">
-    <% site.pages.find({type: type, draft: undefined}).sort('order').each( p => { %>
-      <li class="toc__item<%- page.title === p.title ? ' current' : '' %>">
-        <a href="<%- url_for(p.path) %>"
-           class="toc__link">
-          <%- p.title %>
-        </a>
-      </li>
-    <% }) %>
-  </ol>
-</nav>
+<% if (type != 'v2') { %>
+  <nav class="toc">
+    <ol class="toc__list unstyled-list">
+      <% site.pages.find({type: type, draft: undefined}).sort('order').each( p => { %>
+        <li class="toc__item<%- page.title === p.title ? ' current' : '' %>">
+          <a href="<%- url_for(p.path) %>"
+            class="toc__link">
+            <%- p.title %>
+          </a>
+        </li>
+      <% }) %>
+    </ol>
+  </nav>
+<% } %>

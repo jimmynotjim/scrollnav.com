@@ -15,9 +15,10 @@ for your specific situation.
 
 ## Markup structure
 
-scrollnav follows [BEM (Block, Element, Modifier) Methodology](tktktk) for
-providing class names to its markup. `scroll-nav` is the block, with `__list`,
-`__item`, and `__link` as elements. The structure looks like this.
+scrollnav follows
+[BEM (Block, Element, Modifier) Methodology](https://en.bem.info/methodology/)
+for providing class names to its markup. `scroll-nav` is the block, with
+`__list`, `__item`, and `__link` as elements. The structure looks like this.
 
 ```css
 nav.scroll-nav
@@ -27,7 +28,8 @@ nav.scroll-nav
 ```
 
 <p class="article-note">For a good overview on BEM Methodology, read
-[MindBEMding - getting your head 'round BEM syntax](tktktk)</p>
+[MindBEMding - getting your head 'round BEM syntax](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
+</p>
 
 
 ## Active highlighting
@@ -40,4 +42,5 @@ nav.
 
 <p class="article-note">To view the location of the active area threshold
 within your document enable `debug` mode from scrollnav's list of
-[additional options](tktktk).</p>
+[additional options](/scrollnav.com/guide/customizing.html#additional-options).
+</p>

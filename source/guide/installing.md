@@ -11,7 +11,9 @@ source as part of your project's build process.
 
 <p class="article-note">_Building from source assumes an intermediate level of
 knowledge about build tooling. If you have trouble compiling the plugin on your
-own please use the provided `/dist` files or seek help from Stack Overflow._</p>
+own please use the provided compiled files or seek help from
+[Stack Overflow](https://stackoverflow.com/search?tab=newest&q=scrollnav.js)_
+</p>
 
 ## Include directly
 
@@ -42,19 +44,19 @@ v3.0.0 so you'll need to update the script tag whenever a new version is release
 
 ## Package manager
 
-Install with [Yarn](tktktk)
+Install with [Yarn](https://yarnpkg.com/en/)
 
 ```bash
 yarn add scrollnav
 ```
 
-Install with [NPM](tktktk)
+Install with [NPM](https://www.npmjs.com/)
 
 ```bash
 npm install scrollnav
 ```
 
-Install with [Bower](tktktk)
+Install with [Bower](https://bower.io/)
 
 ```bash
 bower install scrollnav --save

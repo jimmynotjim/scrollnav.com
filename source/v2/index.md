@@ -1,7 +1,14 @@
 ---
 title: v2 documentation
+type: v2
 slug: v2-documentation
 ---
+
+<p class="article-note">
+  This documentation is for an older version of scrollNav and provided for
+  reference only. Version 2 is no longer supported and I highly recommend
+  upgrading to Version 3.
+</p>
 
 ## Getting Started
 
@@ -9,22 +16,8 @@ Install with Bower `bower install scrollNav`
 
 Or download the latest [zipped package][zip].
 
-[zip]: https://github.com/jimmynotjim/scrollNav/archive/master.zip
+[zip]: https://github.com/jimmynotjim/scrollNav/archive/v2.7.3.zip
 
-
-## Features
-
-* ### Simple to set up
-
-  With a single file import and function in your footer, you're on your way.
-
-* ### Fully customizable
-
-  Very little styling is set for you, but the bit that is, is fully customizable.
-
-* ### Tiny Size
-
-  At 1.5kb min'd and GZip'd, scrollNav is pretty unintrusive. If you use Ajax to import and initiate it, it's almost negligable.
 
 ## Requirements
 * For in-page usage [jQuery 1.8.0][16] or greater and [html5shiv][17]/[modernizr][18] for older browser support
@@ -94,7 +87,6 @@ In addition to the initialization, there is now a destroy method available shoul
 ```
 $('.post__article').scrollNav('destroy');
 ```
-
 
 ### Reset Positions on DOM Change
 
@@ -242,83 +234,11 @@ $('.post__article').scrollNav({
 
 The plugin will refuse to build and log an error message if it doesn't find your desired container, the insertion target or any of the headlines specified within the container. If the nav doesn't show up on load, check your browser's console.
 
-## Issues
-
-There are a few known issues, including poor location updating when scrolling on touch devices. If you find any others please submit them to [the issue tracker][5].
-
-## License
-
-scrollNav is Copyright &copy; 2012-2018 James Wilson, released under the [MIT license][6]. This means you can re-create, edit or share the plugin as long as you maintain the same open licensing.
-
-## Version
-
-Latest stable version is v2.7.3. Make sure to view [the changelog][15] before updating, v2 is a complete re-write of the plugin.
-
-## Testing
-
-Tests are written using QUnit. To run the test suite with PhantomJS, run `$ grunt test` or `$ grunt watch`. To run the test in your default browser run `$ grunt test:browser`.
-
-## Developers
-
-Please read the [contributing guidelines][14] and [issue tracker][5] before starting on code.
-
-In order to build and test scrollNav.js, you'll need to install its dev dependencies `$ npm install` and have grunt-cli globally installed `$ npm install -g grunt-cli`.
-
-Available Grunt tasks that will be useful in development.
-
-* grunt lint – Runs source and test files through JSHint.
-* grunt test – Runs the test suite with PhantomJS.
-* grunt concat - Builds the source to /dist.
-* grunt uglify - Minifies the source to /dist.
-* grunt build - Runs all of the above and rebuilds from source .
-* grunt watch – Runs all of the above whenever a file is modified.
-
-## Author
-
-[James Wilson (@jimmynotjim)][7]
-
-## With Help From
-
-* [Eric Clemmons (@ericclemmons)][8]
-* [Jeff Byrnes (@jeffbyrnes)][9]
-* [Jeff Coburn (@coburnicus)][10]
-* [Jen Germann (@germanny)][11]
-* [Wizcover (@wizcover)][12]
-* [MeghdadHadidi (@MeghdadHadidi)][13]
-* [Marc Amos (@marcamos)][23]
-* [Felix Borzik (@Borzik)][24]
-* [Masud Rahman (@frutiger)][25]
-* [Rob Loach (@RobLoach)][26]
-* [Will Moore (@willthemoor)][27]
-* [Chris Garcia (@pixelbandito)][28]
-* [Jim Schmid (@sheeep)][29]
-
-[1]: http://scrollnav.com
-[2]: #
 [3]: http://bem.info/method/
 [4]: http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
-[5]: https://github.com/jimmynotjim/scrollNav/issues
-[6]: https://github.com/jimmynotjim/scrollNav/blob/master/LICENSE-MIT
-[7]: http://github.com/jimmynotjim
-[8]: https://github.com/ericclemmons
-[9]: https://github.com/jeffbyrnes
-[10]: https://github.com/coburnicus
-[11]: https://github.com/germanny
-[12]: https://github.com/wizcover
-[13]: https://github.com/MeghdadHadidi
-[14]: https://github.com/jimmynotjim/scrollNav/blob/master/CONTRIBUTING.md
-[15]: https://github.com/jimmynotjim/scrollNav/blob/master/CHANGELOG.md
 [16]: http://jquery.com/
 [17]: https://github.com/aFarkas/html5shiv
 [18]: http://modernizr.com/
 [19]: http://nodejs.org/
 [20]: http://gruntjs.com/
 [21]: https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver
-[22]: http://caniuse.com/#search=mutation%20observer
-[23]: http://github.com/marcamos
-[24]: http://github.com/borzik
-[25]: http://github.com/frutiger
-[26]: http://github.com/RobLoach
-[27]: http://github.com/willthemoor
-[28]: http://github.com/pixelbandito
-[29]: http://github.com/sheeep

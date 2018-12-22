@@ -4,9 +4,9 @@ type: guide
 order: 3
 ---
 
-scrollnav works by scanning the given [HTML Node Element](tktktk) for section
-landmarks, by default `h2` elements, that it then uses to generate the
-navigation.
+scrollnav works by scanning a single passed [HTML Element](https://developer.mozilla.org/en-US/docs/Web/API/Element) for section
+landmarks--by default `h2` elements--that it then uses to generate the
+navigation schema.
 
 ## Page markup
 
@@ -27,9 +27,9 @@ like this:
 
 ## Initialize
 
-Next, we'll save the `.main-content` container Node to a variable and then pass
-it on to scrollnav. In this example we'll use `.querySelector()` but you could
-also use `.getElementByID()` or `.getElementByClassName()`.
+Next, we'll save the `.main-content` container Element to a variable and then
+pass it on to scrollnav. In this example we'll use `.querySelector()` but you
+could also use `.getElementByID()` or `.getElementByClassName()`.
 
 ```js
 const content = document.querySelector('.main-content');

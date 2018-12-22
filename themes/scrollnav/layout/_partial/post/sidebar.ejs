@@ -2,10 +2,11 @@
   <div class="sidebar__inner">
     <header class="sidebar__header">
       <h2 class="sidebar__heading">
-        <%- type.charAt(0).toUpperCase() + type.slice(1) %>
+        <%= page.type === 'v2' ? 'v2 Docs' : type.charAt(0).toUpperCase() + type.slice(1) %>
       </h2>
       <span class="sidebar__small">
-        Ver. <%= config.current_version %>
+        Ver.
+        <%= page.type === 'v2' ? '2.7.3' : config.current_version %>
       </span>
     </header>
     <%- partial('toc', { type: type }) %>

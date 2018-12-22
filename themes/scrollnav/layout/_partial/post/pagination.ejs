@@ -15,25 +15,27 @@
 } %>
 
 <% if (post.prev || post.next) { %>
-  <% if (post.next) { %>
-    <h4>Next up, <%= post.next.title %>.</h4>
-  <% } %>
   <nav class="pagination">
-    <div class="pagination__prev">
-      <% if (post.prev && post.prev.title) { %>
-        <a class="btn btn--outline pagination__link" href="<%- url_for(post.prev.path) %>" id="article-nav-newer">
-          &larr;
-          <span class="pagination__text"><%# post.prev.title %>Prev</span>
-        </a>
-      <% } %>
-    </div>
-    <div class="pagination__next">
-      <% if (post.next && post.next.title) { %>
-        <a class="btn btn--outline pagination__link" href="<%- url_for(post.next.path) %>" id="article-nav-older">
-          <span class="pagination__text"><%# post.next.title %>Next</span>
-          &rarr;
-        </a>
-      <% } %>
-    </div>
+    <% if (post.next) { %>
+      <h4 class="pagination__heading">Next up, <%= post.next.title %>.</h4>
+    <% } %>
+    <ul class="pagination__links unstyled-list">
+      <li class="pagination__prev">
+        <% if (post.prev && post.prev.title) { %>
+          <a class="btn btn--outline pagination__link" href="<%- url_for(post.prev.path) %>" id="article-nav-newer">
+            &larr;
+            <span class="pagination__text"><%# post.prev.title %>Prev</span>
+          </a>
+        <% } %>
+      </li>
+      <li class="pagination__next">
+        <% if (post.next && post.next.title) { %>
+          <a class="btn btn--outline pagination__link" href="<%- url_for(post.next.path) %>" id="article-nav-older">
+            <span class="pagination__text"><%# post.next.title %>Next</span>
+            &rarr;
+          </a>
+        <% } %>
+      </li>
+    </ul>
   </nav>
 <% } %>
