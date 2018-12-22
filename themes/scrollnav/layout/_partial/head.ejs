@@ -4,18 +4,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>
-    <%= page.title ? page.title : '' %> | <%= config.title %>
+    <%= page.title ? page.title + ' | ': '' %><%= config.title %>
   </title>
 
   <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
 
   <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,700" rel="stylesheet">
 
-  <%#
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,600" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,600" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600" rel="stylesheet">
-  %>
   <% if (theme.rss){ %>
     <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml">
   <% } %>
@@ -23,11 +18,21 @@
     <link rel="icon" href="<%- theme.favicon %>">
   <% } %>
   <% if (config.highlight.enable){ %>
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <!-- <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css"> -->
   <% } %>
 
   <%- css('css/style.css') %>
 
-  <!-- Twitter bootstrap (via cdn) -->
-  <%#<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">%>
+  <!-- Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33078147-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
 </head>
