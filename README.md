@@ -1,2 +1,2 @@
 # scrollnav.com
-The official documentation site for scrollNav.js
+The official documentation site for scrollnav.js

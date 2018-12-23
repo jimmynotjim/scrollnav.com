@@ -23,23 +23,23 @@ register scrollnav as a global variable.
 ### Manual
 
 <a class="btn btn--outline"
-href="https://unpkg.com/scrollnav@3.0.0/dist/scrollnav.umd.min.js"
+href="https://unpkg.com/scrollnav@3.0.1/dist/scrollnav.min.umd.js"
 title="Download scrollnav from unpkg.com">
-  Download scrollnav v3.0.0
+  Download scrollnav v3.0.1
 </a>
 
 ```html
-<script src="[your assets directory]/scrollnav.umd.min.js"></script>
+<script src="[your assets directory]/scrollnav.min.umd.js"></script>
 ```
 ### CDN
 
 If you want to leverage the speed and distribution of a CDN scrollnav is
-available on [unpkg](https://unpkg.com/scrollnav@3.0.0/) and
-[jsdelivr](https://cdn.jsdelivr.net/npm/scrollnav@3.0.0/). The URL is pinned to
-v3.0.0 so you'll need to update the script tag whenever a new version is released.
+available on [unpkg](https://unpkg.com/scrollnav@3.0.1/) and
+[jsdelivr](https://cdn.jsdelivr.net/npm/scrollnav@3.0.1/). The URL is pinned to
+v3.0.1 so you'll need to update the script tag whenever a new version is released.
 
 ```html
-<script src="https://unpkg.com/scrollnav@3.0.0/dist/scrollnav.umd.min.js"></script>
+<script src="https://unpkg.com/scrollnav@3.0.1/dist/scrollnav.min.umd.js"></script>
 ```
 
 ## Package manager

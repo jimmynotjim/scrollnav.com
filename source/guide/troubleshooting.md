@@ -21,7 +21,7 @@ an issue][2]. Ensuring your issue conforms to the guidelines gives it a better
 chance I'll be able to help address it.
 
 ## Questions
-For questions about using scrollNav in your own project, your best bet is to
+For questions about using scrollnav in your own project, your best bet is to
 post it to [Stack Overflow][21]. The community there is great at lending a hand
 and can often respond faster than I can, plus it becomes searchable for future
 developers who may run into the same question. If you're still stuck, please
