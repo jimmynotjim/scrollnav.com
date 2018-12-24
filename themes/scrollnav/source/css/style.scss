@@ -454,10 +454,17 @@ pre[class*="language-"] {
 }
 
 .home-features__list {
+  margin-top: 60px;
+
   @media screen and (min-width: em(830px, $size-v)) {
     display: grid;
     grid-gap: 40px;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  svg {
+    margin: 0 auto 40px;
+    display: block;
   }
 
   h3 {
