@@ -6,4 +6,3 @@ node_sass:
   sourceComments: false
   includePaths:
    - node_modules
-favicon: /favicon.icon
