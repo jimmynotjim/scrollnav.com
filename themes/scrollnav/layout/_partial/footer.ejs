@@ -73,7 +73,8 @@
 </footer>
 
 <% if ( page.type === 'guide' ) { %>
-  <script src="https://unpkg.com/scrollnav@3.0.1/dist/scrollnav.min.umd.js"></script>
+  <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=default,NodeList.prototype.forEach,Array.prototype.includes"></script>
+  <script src="https://unpkg.com/scrollnav@3.0.2/dist/scrollnav.min.umd.js"></script>
   <script>
     const content = document.querySelector('.article-entry');
     const sidebarCurrent = document.querySelector('.toc__item.current');

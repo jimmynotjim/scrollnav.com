@@ -83,6 +83,22 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+node_sass:
+  debug: true
+  outputStyle: nested
+  precision: 5
+  sourceComments: true
+  includePaths:
+   - node_modules
+
+autoprefixer:
+  exclude:
+    - '*.min.css'
+  browsers:
+    - 'last 2 versions'
+  grid: "autoplace"
+
+
 ## Themes: https://hexo.io/themes/
 theme: scrollnav
 

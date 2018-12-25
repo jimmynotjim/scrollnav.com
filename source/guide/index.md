@@ -23,11 +23,18 @@ necessary.
 
 ## Browser Compatibility
 
-scrollnav supports all [ES5 compatible browsers](https://caniuse.com/#feat=es5)
-using polyfills for modern features (IE8 and below are not supported). If you
-wish to provide your own polyfills or only support
-[ES6 compatible browsers](https://caniuse.com/#feat=arrow-functions), feel free
-to compile the plugin from source as part of your project's build process.
+To keep scrollnav small, default support starts with
+[ES6 compatible browsers](https://caniuse.com/#feat=arrow-functions). To support
+[ES5 compatible browsers](https://caniuse.com/#feat=es5) you must provide your
+own polyfills or rely on a third party library like pollyfills.io. I personally
+use the following polyfill.io feature parameters to support scrollnav in
+IE 10 & 11.
+
+```hmlt
+<script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=default,NodeList.prototype.forEach,Array.prototype.includes"></script>
+```
+
+To add your own polyfills you will need to build the project from source.
 
 <p class="article-note">_Building from source assumes an intermediate level of
 knowledge about build tooling. If you have trouble compiling the plugin on your

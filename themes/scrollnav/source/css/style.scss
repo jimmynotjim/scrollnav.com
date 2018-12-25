@@ -36,6 +36,8 @@ $size-vi: 14px;
 @import '_base/_links';
 @import '_base/_lists';
 
+
+
 html {
   color: $color-text-regular;
   font-family: 'Lato', sans-serif;
@@ -162,16 +164,19 @@ pre[class*="language-"] {
 .container--has-sidebar {
   @media screen and (min-width: em(830px, $size-v)) {
     display: grid;
+    grid-template-rows: auto;
     grid-template-columns: calc(37.5% - 10px) calc(62.5% - 10px);
     grid-gap: em(20px, $base-font-size);
   }
 
   @media screen and (min-width: em(900px, $size-v)) {
+    grid-template-rows: auto;
     grid-template-columns: calc(30% - 20px) calc(60% - 20px);
     grid-gap: em(40px, $base-font-size);
   }
 
   @media screen and (min-width: em(1080px, $size-v)) {
+    grid-template-rows: auto;
     grid-template-columns: calc(25% - 20px) calc(75% - 20px);
     grid-gap: em(40px, $base-font-size);
   }
@@ -338,12 +343,12 @@ pre[class*="language-"] {
   font-size: $size-v;
   padding-bottom: 60px;
   padding-top: 60px;
-  //font-weight: 400;
 }
 
 .footer-nav {
   display: grid;
   font-weight: 400;
+  grid-template-rows: auto;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
   width: 80%;
@@ -374,23 +379,38 @@ pre[class*="language-"] {
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @media screen and (min-width: em(830px, $size-v)) {
-    display: grid;
-    grid-template-areas: "home-hero-logo home-hero-description"
-                         "home-hero-links home-hero-links";
-    grid-gap: 60px;
-    padding-top: 140px;
-    padding-bottom: 80px;
-  }
-
   @media screen and (min-width: em(1080px, $size-v)) {
     padding-right: 140px;
     padding-left: 140px;
   }
 }
 
+@media screen and (min-width: em(830px, $size-v)) {
+  .home-hero {
+    display: grid;
+    grid-template-areas: "home-hero-logo home-hero-description"
+                         "home-hero-links home-hero-links";
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 60px;
+    padding-top: 140px;
+    padding-bottom: 80px;
+  }
+
+  .home-hero__logo {
+    grid-area: home-hero-logo;
+  }
+
+  .home-hero__description {
+    grid-area: home-hero-description;
+  }
+
+  .home-hero__links {
+    grid-area: home-hero-links;
+  }
+}
+
 .home-hero__logo {
-  grid-area: home-hero-logo;
   font-size: 34px;
 
   @media screen and (max-width: em(829px, $size-v)) {
@@ -405,7 +425,6 @@ pre[class*="language-"] {
 }
 
 .home-hero__description {
-  grid-area: home-hero-description;
   font-size: 22px;
   margin: 40px 0;
 
@@ -416,8 +435,6 @@ pre[class*="language-"] {
 }
 
 .home-hero__links {
-  grid-area: home-hero-links;
-
   @media screen and (min-width: em(600px, $size-v)) {
     display: flex;
     justify-content: center;
@@ -459,6 +476,7 @@ pre[class*="language-"] {
   @media screen and (min-width: em(830px, $size-v)) {
     display: grid;
     grid-gap: 40px;
+    grid-template-rows: auto;
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -487,7 +505,9 @@ pre[class*="language-"] {
 
   @media screen and (min-width: em(830px, $size-v)) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "home-contribute-description home-contribute-links";
     grid-gap: 30px;
     margin: 0 auto;
   }
@@ -510,12 +530,11 @@ pre[class*="language-"] {
 }
 
 .home-contribute__description {
-  // grid-area: home-contribute-description;
   font-size: 21px;
   margin: 40px 0;
-  grid-column: span 2;
 
   @media screen and (min-width: em(830px, $size-v)) {
+    grid-area: home-contribute-description;
     margin: 0;
   }
 }
@@ -525,12 +544,21 @@ pre[class*="language-"] {
     display: flex;
     justify-content: center;
   }
+
+  @media screen and (min-width: em(830px, $size-v)) {
+    grid-area: home-contribute-links;
+  }
+
   li {
-    margin: 0 40px;
 
     &:first-child {
-      @media screen and (max-width: em(699px, $size-v)) {
+      @media screen and (max-width: em(599px, $size-v)) {
         margin-bottom: 20px;
+      }
+
+      @media screen and (min-width: em(600px, $size-v)) and (max-width: em(829px, $size-v)) {
+        margin-left: 40px;
+        margin-right: 40px;
       }
 
       @media screen and (min-width: em(830px, $size-v)) {
@@ -542,6 +570,5 @@ pre[class*="language-"] {
 
   .btn {
     display: block;
-    min-width: 180px;
   }
 }
