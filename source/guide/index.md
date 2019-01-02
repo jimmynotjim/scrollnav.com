@@ -30,7 +30,7 @@ own polyfills or rely on a third party library like pollyfills.io. I personally
 use the following polyfill.io feature parameters to support scrollnav in
 IE 10 & 11.
 
-```hmlt
+```html
 <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=default,NodeList.prototype.forEach,Array.prototype.includes"></script>
 ```
 
