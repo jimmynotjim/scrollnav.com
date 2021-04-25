@@ -177,6 +177,7 @@ as the second argument like this:</p>
 <pre><code class="highlight js">scrollnav.init(content, &#123;
   key: value
 &#125;);</code></pre>
+
 <h2 id="default-settings"><a href="#default-settings" class="headerlink" title="Default settings"></a>Default settings</h2><p>The following settings are editable to overwrite the default.</p>
 <pre><code class="highlight js">&#123;
   sections: <span class="string">&#x27;selector&#x27;</span>,
@@ -215,6 +216,7 @@ as the second argument like this:</p>
   <span class="comment">//</span>
   <span class="comment">// Sets the history behavior when a nav item is clicked, by default it&#x27;s true</span>
 &#125;</code></pre>
+
 <h2 id="additional-options"><a href="#additional-options" class="headerlink" title="Additional options"></a>Additional options</h2><p>These additional options are editable but are not set by default.</p>
 <pre><code class="highlight js">&#123;
   subSections: <span class="string">&#x27;...&#x27;</span>,
@@ -252,6 +254,7 @@ as the second argument like this:</p>
   <span class="comment">// display the active area threshold on screen, helpful for when you&#x27;ve hit a</span>
   <span class="comment">// snag you can&#x27;t easily identify.</span>
 &#125;</code></pre>
+
 <h2 id="available-methods"><a href="#available-methods" class="headerlink" title="Available methods"></a>Available methods</h2><p>In addition to the <code>.init()</code> method scrollnav provides two additional public
 methods.</p>
 <h3 id="destroy"><a href="#destroy" class="headerlink" title="destroy()"></a>destroy()</h3><p>To remove the current instance of scrollnav call the destroy method. If you
@@ -259,6 +262,7 @@ need to trigger a callback after scrollnav has been removed, use the
 <code>onDestroy</code> option described above (passed either in the original init or with
 the destroy method).</p>
 <pre><code class="highlight js">scrollnav.destroy();</code></pre>
+
 <h3 id="updatepositions"><a href="#updatepositions" class="headerlink" title="updatePositions()"></a>updatePositions()</h3><p>scrollnav doesn’t track outside DOM changes. If your page’s content is dynamic
 and updates after scrollnav is initialized you’ll need to recalcuate the
 position data with the updatePositions method. If you need to trigger a

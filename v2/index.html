@@ -143,6 +143,7 @@
 </ul>
 <h2 id="usage"><a href="#usage" class="headerlink" title="Usage"></a>Usage</h2><h3 id="import"><a href="#import" class="headerlink" title="Import"></a>Import</h3><p>Start by importing the script to your page, the best location is in the footer, but no matter what, make sure it follows your jQuery file.</p>
 <pre><code class="highlight html"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;jquery.scrollNav.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></code></pre>
+
 <h3 id="build-your-page"><a href="#build-your-page" class="headerlink" title="Build your page"></a>Build your page</h3><p>Include a class or id hook on the element you want to apply the plugin to and include an <code>&lt;h2&gt;</code> for each section you want to inlcude in the navigation.</p>
 <pre><code class="highlight html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main&quot;</span>&gt;</span>
   <span class="tag">&lt;<span class="name">article</span> <span class="attr">class</span>=<span class="string">&quot;post__article&quot;</span>&gt;</span>
@@ -157,8 +158,10 @@
     <span class="tag">&lt;<span class="name">p</span>&gt;</span>More more yada...<span class="tag">&lt;/<span class="name">p</span>&gt;</span>
   <span class="tag">&lt;/<span class="name">article</span>&gt;</span>
 <span class="tag">&lt;/<span class="name">div</span>&gt;</span></code></pre>
+
 <h3 id="initialize"><a href="#initialize" class="headerlink" title="Initialize"></a>Initialize</h3><p>Now initialize the plugin with your hook for the article</p>
 <pre><code class="highlight plain">$(&#39;.post__article&#39;).scrollNav();</code></pre>
+
 <p>and the plugin scans the article, grabs all the <code>&lt;h2&gt;</code>s, adds them to the navigation list and inserts the list before the article. It’s that easy…well almost.</p>
 <h3 id="styling"><a href="#styling" class="headerlink" title="Styling"></a>Styling</h3><p>To keep the plugin simple there are no styles added to the navigation, that’s all up to you. The nav structure looks like this and includes class names in the <a target="_blank" rel="noopener" href="http://bem.info/method/">BEM Methodology</a> style (for a good overview read <a target="_blank" rel="noopener" href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">MindBEMding - getting your head ‘round BEM syntax</a>):</p>
 <pre><code class="highlight html"><span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">&quot;scroll-nav&quot;</span>&gt;</span>
@@ -167,13 +170,16 @@
     <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">&quot;scroll-nav__list&quot;</span>&gt;</span>
       <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;scroll-nav__item&quot;</span>&gt;</span>
         <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;scroll-nav__link&quot;</span>&gt;</span></code></pre>
+
 <p>An <code>active</code> class is attached to the nav item matching the section and sub-section that is the highest within the view bounds. An <code>in-view</code> class is attached to all nav items whose section or sub-section is within the view bounds. If you have short sections at the end of your page and dislike that the last nav itmes are never activated, you can use the <code>in-view</code> hook to style all sections with in the view.</p>
 <p>There are loading hooks added to the body element (similar to how Typekit handles font loading) to allow for css transitions or any other changes in css you’d need. When the plug-in starts <code>sn-loading</code> is added to the body class and is replaced by <code>sn-active</code> when the plugin is successful or <code>sn-failed</code> if it fails.</p>
 <h3 id="destroy-scrollnav"><a href="#destroy-scrollnav" class="headerlink" title="Destroy scrollNav"></a>Destroy scrollNav</h3><p>In addition to the initialization, there is now a destroy method available should you need it. To destroy scrollNav and remove all it’s DOM changes use:</p>
 <pre><code class="highlight plain">$(&#39;.post__article&#39;).scrollNav(&#39;destroy&#39;);</code></pre>
+
 <h3 id="reset-positions-on-dom-change"><a href="#reset-positions-on-dom-change" class="headerlink" title="Reset Positions on DOM Change"></a>Reset Positions on DOM Change</h3><p>There are a couple of ways you can reset scrollNav’s positions when the DOM changes:</p>
 <h4 id="manually"><a href="#manually" class="headerlink" title="Manually"></a>Manually</h4><p>Simply call the <code>resetPos</code> method on your own:</p>
 <pre><code class="highlight plain">$.fn.scrollNav(&#39;resetPos&#39;);</code></pre>
+
 <h4 id="automatically"><a href="#automatically" class="headerlink" title="Automatically"></a>Automatically</h4><p>Utilize <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver">mutation observers</a> to call the <code>resetPos</code> method automatically:</p>
 <pre><code class="highlight plain">var $;
 var observer_target &#x3D; document.querySelector(&#39;.post__article&#39;);
@@ -189,6 +195,7 @@ var observer_config &#x3D; &#123;
   subtree: true
 &#125;;
 observer.observe(observer_target, observer_config);</code></pre>
+
 <h2 id="default-options"><a href="#default-options" class="headerlink" title="Default options"></a>Default <code>options</code></h2><p>There are a few customizable options in scrollNav using key : value pairs. These are the defaults.</p>
 <pre><code class="highlight plain">$(&#39;.post-article&#39;).scrollNav(&#123;
   sections: &#39;h2&#39;,
@@ -212,6 +219,7 @@ observer.observe(observer_target, observer_config);</code></pre>
   onRender: null,
   onDestroy: null
 &#125;);</code></pre>
+
 <h3 id="sections"><a href="#sections" class="headerlink" title="Sections"></a>Sections</h3><p>As mentioned, the script automatically searches for <code>&lt;h2&gt;</code>s within the target article. If your page structure differs, feel free to target another selector, like an <code>&lt;h3&gt;</code> or <code>&lt;h4&gt;</code> or even a class, like <code>.scroll-headline</code>.</p>
 <h3 id="sub-sections"><a href="#sub-sections" class="headerlink" title="Sub-Sections"></a>Sub-Sections</h3><p>Set to <code>false</code> by default, the plugin supports nesting sub-sections within each section in the final nav. Available selectors are the same as Sections.</p>
 <h3 id="section-wrapper-element"><a href="#section-wrapper-element" class="headerlink" title="Section Wrapper Element"></a>Section Wrapper Element</h3><p>If your article already contains <code>section</code> tags, you’ll want to change this to <code>&#39;div&#39;</code>. Sub-sections aren’t affected by this option.</p>
@@ -235,6 +243,7 @@ observer.observe(observer_target, observer_config);</code></pre>
     callback actions in here
   &#125;
 &#125;);</code></pre>
+
 <h2 id="errors"><a href="#errors" class="headerlink" title="Errors"></a>Errors</h2><p>The plugin will refuse to build and log an error message if it doesn’t find your desired container, the insertion target or any of the headlines specified within the container. If the nav doesn’t show up on load, check your browser’s console.</p>
 
       

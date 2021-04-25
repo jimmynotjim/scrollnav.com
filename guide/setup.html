@@ -184,11 +184,13 @@ like this:</p>
   <span class="tag">&lt;<span class="name">h2</span>&gt;</span>Third section<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>
   ...
 <span class="tag">&lt;/<span class="name">div</span>&gt;</span></code></pre>
+
 <h2 id="initialize"><a href="#initialize" class="headerlink" title="Initialize"></a>Initialize</h2><p>Next, we’ll save the <code>.main-content</code> container Element to a variable and then
 pass it on to scrollnav. In this example we’ll use <code>.querySelector()</code> but you
 could also use <code>.getElementByID()</code> or <code>.getElementByClassName()</code>.</p>
 <pre><code class="highlight js"><span class="keyword">const</span> content = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.main-content&#x27;</span>);
 scrollnav.init(content);</code></pre>
+
 <p>scrollnav will then loop through the the <code>h2</code> elements, add an ID if they don’t
 already have one, build the nav, and then inject it just before the
 <code>.main-content</code> Node. The result for our example document would look like this:</p>
