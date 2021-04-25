@@ -32,6 +32,8 @@
 
   
   
+    <!-- <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css"> -->
+  
 
   
 <link rel="stylesheet" href="/css/style.css">
@@ -47,7 +49,7 @@
     gtag('config', 'UA-33078147-3');
   </script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-base16-ateliersulphurpool.light.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
   <body>
@@ -174,34 +176,31 @@ source as part of your project’s build process.</p>
 <p class="article-note"><em>Building from source assumes an intermediate level of
 knowledge about build tooling. If you have trouble compiling the plugin on your
 own please use the provided compiled files or seek help from
-<a href="https://stackoverflow.com/search?tab=newest&amp;q=scrollnav.js" target="_blank" rel="noopener">Stack Overflow</a></em>
+<a target="_blank" rel="noopener" href="https://stackoverflow.com/search?tab=newest&amp;q=scrollnav.js">Stack Overflow</a></em>
 </p>
 
 <h2 id="include-directly"><a href="#include-directly" class="headerlink" title="Include directly"></a>Include directly</h2><p>Include the minified Universal Module Definition (UMD) files as a script tag to
 register scrollnav as a global variable.</p>
-<h3 id="manual"><a href="#manual" class="headerlink" title="Manual"></a>Manual</h3><p><a class="btn btn--outline" href="https://unpkg.com/scrollnav@3.0.1/dist/scrollnav.min.umd.js" title="Download scrollnav from unpkg.com" target="_blank" rel="noopener">
+<h3 id="manual"><a href="#manual" class="headerlink" title="Manual"></a>Manual</h3><p><a class="btn btn--outline"
+target="_blank" rel="noopener" href="https://unpkg.com/scrollnav@3.0.1/dist/scrollnav.min.umd.js"
+title="Download scrollnav from unpkg.com">
   Download scrollnav v3.0.1
 </a></p>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>[your assets directory]/scrollnav.min.umd.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-</code></pre>
+<pre><code class="highlight html"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;[your assets directory]/scrollnav.min.umd.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></code></pre>
 <h3 id="cdn"><a href="#cdn" class="headerlink" title="CDN"></a>CDN</h3><p>If you want to leverage the speed and distribution of a CDN scrollnav is
-available on <a href="https://unpkg.com/scrollnav@3.0.1/" target="_blank" rel="noopener">unpkg</a> and
-<a href="https://cdn.jsdelivr.net/npm/scrollnav@3.0.1/" target="_blank" rel="noopener">jsdelivr</a>. The URL is pinned to
+available on <a target="_blank" rel="noopener" href="https://unpkg.com/scrollnav@3.0.1/">unpkg</a> and
+<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/npm/scrollnav@3.0.1/">jsdelivr</a>. The URL is pinned to
 v3.0.1 so you’ll need to update the script tag whenever a new version is released.</p>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://unpkg.com/scrollnav@3.0.1/dist/scrollnav.min.umd.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-</code></pre>
-<h2 id="package-manager"><a href="#package-manager" class="headerlink" title="Package manager"></a>Package manager</h2><p>Install with <a href="https://yarnpkg.com/en/" target="_blank" rel="noopener">Yarn</a></p>
-<pre class=" language-bash"><code class="language-bash">yarn add scrollnav
-</code></pre>
-<p>Install with <a href="https://www.npmjs.com/" target="_blank" rel="noopener">NPM</a></p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> scrollnav
-</code></pre>
-<p>Install with <a href="https://bower.io/" target="_blank" rel="noopener">Bower</a></p>
-<pre class=" language-bash"><code class="language-bash">bower <span class="token function">install</span> scrollnav --save
-</code></pre>
+<pre><code class="highlight html"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/scrollnav@3.0.1/dist/scrollnav.min.umd.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></code></pre>
+<h2 id="package-manager"><a href="#package-manager" class="headerlink" title="Package manager"></a>Package manager</h2><p>Install with <a target="_blank" rel="noopener" href="https://yarnpkg.com/en/">Yarn</a></p>
+<pre><code class="highlight bash">yarn add scrollnav</code></pre>
+<p>Install with <a target="_blank" rel="noopener" href="https://www.npmjs.com/">NPM</a></p>
+<pre><code class="highlight bash">npm install scrollnav</code></pre>
+<p>Install with <a target="_blank" rel="noopener" href="https://bower.io/">Bower</a></p>
+<pre><code class="highlight bash">bower install scrollnav --save</code></pre>
 <p class="article-note"><em>The folks from Bower no longer recommend using Bower.
 Luckily they’ve created
-<a href="https://bower.io/blog/2017/how-to-migrate-away-from-bower/" target="_blank" rel="noopener">a guide to migrating to Yarn</a>.</em>
+<a target="_blank" rel="noopener" href="https://bower.io/blog/2017/how-to-migrate-away-from-bower/">a guide to migrating to Yarn</a>.</em>
 </p>
 
       

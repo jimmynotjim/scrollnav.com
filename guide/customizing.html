@@ -32,6 +32,8 @@
 
   
   
+    <!-- <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css"> -->
+  
 
   
 <link rel="stylesheet" href="/css/style.css">
@@ -47,7 +49,7 @@
     gtag('config', 'UA-33078147-3');
   </script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-base16-ateliersulphurpool.light.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
   <body>
@@ -172,103 +174,98 @@
 your project requires a bit more customization, scrollnav can most likely meet
 those. To modify the settings or set your own options, pass in a single object
 as the second argument like this:</p>
-<pre class=" language-js"><code class="language-js">  scrollnav<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>content<span class="token punctuation">,</span> <span class="token punctuation">{</span>
-    key<span class="token punctuation">:</span> value
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre><code class="highlight js">scrollnav.init(content, &#123;
+  key: value
+&#125;);</code></pre>
 <h2 id="default-settings"><a href="#default-settings" class="headerlink" title="Default settings"></a>Default settings</h2><p>The following settings are editable to overwrite the default.</p>
-<pre class=" language-js"><code class="language-js"><span class="token punctuation">{</span>
-  sections<span class="token punctuation">:</span> <span class="token string">'selector'</span><span class="token punctuation">,</span>
-  <span class="token comment" spellcheck="true">// string</span>
-  <span class="token comment" spellcheck="true">//</span>
-  <span class="token comment" spellcheck="true">// Sets the querySelector for the content's section landmarks, by default</span>
-  <span class="token comment" spellcheck="true">// it's 'h2'.</span>
+<pre><code class="highlight js">&#123;
+  sections: <span class="string">&#x27;selector&#x27;</span>,
+  <span class="comment">// string</span>
+  <span class="comment">//</span>
+  <span class="comment">// Sets the querySelector for the content&#x27;s section landmarks, by default</span>
+  <span class="comment">// it&#x27;s &#x27;h2&#x27;.</span>
 
-  insertTarget<span class="token punctuation">:</span> targetNode<span class="token punctuation">,</span>
-  <span class="token comment" spellcheck="true">// HTML Node</span>
-  <span class="token comment" spellcheck="true">//</span>
-  <span class="token comment" spellcheck="true">// Sets the target Node for injecting the navigation, by default it's the</span>
-  <span class="token comment" spellcheck="true">// content Node passed to scrollnav.</span>
+  insertTarget: targetNode,
+  <span class="comment">// HTML Node</span>
+  <span class="comment">//</span>
+  <span class="comment">// Sets the target Node for injecting the navigation, by default it&#x27;s the</span>
+  <span class="comment">// content Node passed to scrollnav.</span>
 
-  insertLocation<span class="token punctuation">:</span> <span class="token string">'relativeLocation'</span>
-  <span class="token comment" spellcheck="true">// string</span>
-  <span class="token comment" spellcheck="true">//</span>
-  <span class="token comment" spellcheck="true">// Sets the injection location relative to the insertTarget, by default it's</span>
-  <span class="token comment" spellcheck="true">// 'before'.</span>
-  <span class="token comment" spellcheck="true">//</span>
-  <span class="token comment" spellcheck="true">// available options are 'append', 'prepend', 'after', or 'before'</span>
+  insertLocation: <span class="string">&#x27;relativeLocation&#x27;</span>
+  <span class="comment">// string</span>
+  <span class="comment">//</span>
+  <span class="comment">// Sets the injection location relative to the insertTarget, by default it&#x27;s</span>
+  <span class="comment">// &#x27;before&#x27;.</span>
+  <span class="comment">//</span>
+  <span class="comment">// available options are &#x27;append&#x27;, &#x27;prepend&#x27;, &#x27;after&#x27;, or &#x27;before&#x27;</span>
 
-  easingStyle<span class="token punctuation">:</span> <span class="token string">'easingName'</span><span class="token punctuation">,</span>
-  <span class="token comment" spellcheck="true">// string</span>
-  <span class="token comment" spellcheck="true">//</span>
-  <span class="token comment" spellcheck="true">// Sets the easing type for the scroll animation that is triggered by the</span>
-  <span class="token comment" spellcheck="true">// click event on a nav item, by default it's 'easeOutQuad'.</span>
-  <span class="token comment" spellcheck="true">//</span>
-  <span class="token comment" spellcheck="true">// available options are 'linear' 'easeInQuad', 'easeOutQuad',</span>
-  <span class="token comment" spellcheck="true">// 'easeInOutQuad', 'easeInCubic', 'easeOutCubic', 'easeInOutCubic',</span>
-  <span class="token comment" spellcheck="true">// 'easeInQuart', 'easeOutQuart', 'easeInOutQuart', 'easeInQuint',</span>
-  <span class="token comment" spellcheck="true">// 'easeOutQuint', easeInOutQuint</span>
+  easingStyle: <span class="string">&#x27;easingName&#x27;</span>,
+  <span class="comment">// string</span>
+  <span class="comment">//</span>
+  <span class="comment">// Sets the easing type for the scroll animation that is triggered by the</span>
+  <span class="comment">// click event on a nav item, by default it&#x27;s &#x27;easeOutQuad&#x27;.</span>
+  <span class="comment">//</span>
+  <span class="comment">// available options are &#x27;linear&#x27; &#x27;easeInQuad&#x27;, &#x27;easeOutQuad&#x27;,</span>
+  <span class="comment">// &#x27;easeInOutQuad&#x27;, &#x27;easeInCubic&#x27;, &#x27;easeOutCubic&#x27;, &#x27;easeInOutCubic&#x27;,</span>
+  <span class="comment">// &#x27;easeInQuart&#x27;, &#x27;easeOutQuart&#x27;, &#x27;easeInOutQuart&#x27;, &#x27;easeInQuint&#x27;,</span>
+  <span class="comment">// &#x27;easeOutQuint&#x27;, easeInOutQuint</span>
 
-  updateHistory<span class="token punctuation">:</span> <span class="token boolean">true</span>
-  <span class="token comment" spellcheck="true">// boolean</span>
-  <span class="token comment" spellcheck="true">//</span>
-  <span class="token comment" spellcheck="true">// Sets the history behavior when a nav item is clicked, by default it's true</span>
-<span class="token punctuation">}</span>
-</code></pre>
+  updateHistory: <span class="literal">true</span>
+  <span class="comment">// boolean</span>
+  <span class="comment">//</span>
+  <span class="comment">// Sets the history behavior when a nav item is clicked, by default it&#x27;s true</span>
+&#125;</code></pre>
 <h2 id="additional-options"><a href="#additional-options" class="headerlink" title="Additional options"></a>Additional options</h2><p>These additional options are editable but are not set by default.</p>
-<pre class=" language-js"><code class="language-js"><span class="token punctuation">{</span>
-  subSections<span class="token punctuation">:</span> <span class="token string">'...'</span><span class="token punctuation">,</span>
-  <span class="token comment" spellcheck="true">// string</span>
-  <span class="token comment" spellcheck="true">//</span>
-  <span class="token comment" spellcheck="true">// Sets the querySelector for the content's sub-section landmarks.</span>
+<pre><code class="highlight js">&#123;
+  subSections: <span class="string">&#x27;...&#x27;</span>,
+  <span class="comment">// string</span>
+  <span class="comment">//</span>
+  <span class="comment">// Sets the querySelector for the content&#x27;s sub-section landmarks.</span>
 
-  onScroll<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token comment" spellcheck="true">// function</span>
-  <span class="token comment" spellcheck="true">//</span>
-  <span class="token comment" spellcheck="true">// Sets the callback to be triggered after the window scrolls when triggered</span>
-  <span class="token comment" spellcheck="true">// by the click event on a nav item.</span>
+  onScroll: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;...&#125;,
+  <span class="comment">// function</span>
+  <span class="comment">//</span>
+  <span class="comment">// Sets the callback to be triggered after the window scrolls when triggered</span>
+  <span class="comment">// by the click event on a nav item.</span>
 
-  onInit<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token comment" spellcheck="true">// function</span>
-  <span class="token comment" spellcheck="true">//</span>
-  <span class="token comment" spellcheck="true">// Sets the callback to be triggered after the .init() method has completed.</span>
+  onInit: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;...&#125;,
+  <span class="comment">// function</span>
+  <span class="comment">//</span>
+  <span class="comment">// Sets the callback to be triggered after the .init() method has completed.</span>
 
-  onUpdatePositions<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token comment" spellcheck="true">// function</span>
-  <span class="token comment" spellcheck="true">//</span>
-  <span class="token comment" spellcheck="true">// Sets the callback to be triggered after the .updatePositions() method</span>
-  <span class="token comment" spellcheck="true">// has completed.</span>
+  onUpdatePositions: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;...&#125;,
+  <span class="comment">// function</span>
+  <span class="comment">//</span>
+  <span class="comment">// Sets the callback to be triggered after the .updatePositions() method</span>
+  <span class="comment">// has completed.</span>
 
-  onDestroy<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token comment" spellcheck="true">// function</span>
-  <span class="token comment" spellcheck="true">//</span>
-  <span class="token comment" spellcheck="true">// Sets the callback to be triggered after the .destroy() method has</span>
-  <span class="token comment" spellcheck="true">// completed.</span>
+  onDestroy: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;...&#125;,
+  <span class="comment">// function</span>
+  <span class="comment">//</span>
+  <span class="comment">// Sets the callback to be triggered after the .destroy() method has</span>
+  <span class="comment">// completed.</span>
 
-  debug<span class="token punctuation">:</span> <span class="token boolean">false</span>
-  <span class="token comment" spellcheck="true">// boolean</span>
-  <span class="token comment" spellcheck="true">//</span>
-  <span class="token comment" spellcheck="true">// Enables scrollnav's built in debug mode to log errors to the console and</span>
-  <span class="token comment" spellcheck="true">// display the active area threshold on screen, helpful for when you've hit a</span>
-  <span class="token comment" spellcheck="true">// snag you can't easily identify.</span>
-<span class="token punctuation">}</span>
-</code></pre>
+  debug: <span class="literal">false</span>
+  <span class="comment">// boolean</span>
+  <span class="comment">//</span>
+  <span class="comment">// Enables scrollnav&#x27;s built in debug mode to log errors to the console and</span>
+  <span class="comment">// display the active area threshold on screen, helpful for when you&#x27;ve hit a</span>
+  <span class="comment">// snag you can&#x27;t easily identify.</span>
+&#125;</code></pre>
 <h2 id="available-methods"><a href="#available-methods" class="headerlink" title="Available methods"></a>Available methods</h2><p>In addition to the <code>.init()</code> method scrollnav provides two additional public
 methods.</p>
 <h3 id="destroy"><a href="#destroy" class="headerlink" title="destroy()"></a>destroy()</h3><p>To remove the current instance of scrollnav call the destroy method. If you
 need to trigger a callback after scrollnav has been removed, use the
 <code>onDestroy</code> option described above (passed either in the original init or with
 the destroy method).</p>
-<pre class=" language-js"><code class="language-js">scrollnav<span class="token punctuation">.</span><span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre><code class="highlight js">scrollnav.destroy();</code></pre>
 <h3 id="updatepositions"><a href="#updatepositions" class="headerlink" title="updatePositions()"></a>updatePositions()</h3><p>scrollnav doesn’t track outside DOM changes. If your page’s content is dynamic
 and updates after scrollnav is initialized you’ll need to recalcuate the
 position data with the updatePositions method. If you need to trigger a
 callback after the position data has been recalculated, use the
 <code>onUpdatePositions</code> option described above (passed either in the original init
 or with the updatePositions method).</p>
-<pre class=" language-js"><code class="language-js">scrollnav<span class="token punctuation">.</span><span class="token function">updatePositions</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre><code class="highlight js">scrollnav.updatePositions();</code></pre>
 
       
 

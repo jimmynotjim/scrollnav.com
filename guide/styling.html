@@ -32,6 +32,8 @@
 
   
   
+    <!-- <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css"> -->
+  
 
   
 <link rel="stylesheet" href="/css/style.css">
@@ -47,7 +49,7 @@
     gtag('config', 'UA-33078147-3');
   </script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-base16-ateliersulphurpool.light.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
   <body>
@@ -175,16 +177,15 @@ bundled with default styles. I’ve <a href="tktktk">created a few demos</a> to 
 some general direction, but it’s completely up to you to make scrollnav work
 for your specific situation.</p>
 <h2 id="markup-structure"><a href="#markup-structure" class="headerlink" title="Markup structure"></a>Markup structure</h2><p>scrollnav follows
-<a href="https://en.bem.info/methodology/" target="_blank" rel="noopener">BEM (Block, Element, Modifier) Methodology</a>
+<a target="_blank" rel="noopener" href="https://en.bem.info/methodology/">BEM (Block, Element, Modifier) Methodology</a>
 for providing class names to its markup. <code>scroll-nav</code> is the block, with
 <code>__list</code>, <code>__item</code>, and <code>__link</code> as elements. The structure looks like this.</p>
-<pre class=" language-css"><code class="language-css">nav<span class="token number">.</span>scroll-nav
-  ol<span class="token number">.</span>scroll-nav__list
-    li<span class="token number">.</span>scroll-nav__item<span class="token number">.</span>scroll-nav__item--active
-      a<span class="token number">.</span>scroll-nav__link
-</code></pre>
+<pre><code class="highlight css"><span class="selector-tag">nav</span><span class="selector-class">.scroll-nav</span>
+  <span class="selector-tag">ol</span><span class="selector-class">.scroll-nav__list</span>
+    <span class="selector-tag">li</span><span class="selector-class">.scroll-nav__item</span><span class="selector-class">.scroll-nav__item--active</span>
+      <span class="selector-tag">a</span><span class="selector-class">.scroll-nav__link</span></code></pre>
 <p class="article-note">For a good overview on BEM Methodology, read
-<a href="https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/" target="_blank" rel="noopener">MindBEMding - getting your head ‘round BEM syntax</a>
+<a target="_blank" rel="noopener" href="https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">MindBEMding - getting your head ‘round BEM syntax</a>
 </p>
 
 
