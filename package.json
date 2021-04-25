@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.8.0"
+    "version": "5.4.0"
   },
   "dependencies": {
-    "hexo": "^3.8.0",
+    "hexo": "5.4.0",
     "hexo-autoprefixer": "github:hexojs/hexo-autoprefixer#ccfa156",
     "hexo-deployer-git": "^0.3.1",
     "hexo-generator-archive": "^0.1.5",
@@ -19,10 +19,11 @@
     "hexo-renderer-marked": "^0.3.2",
     "hexo-renderer-scss": "^1.2.0",
     "hexo-renderer-stylus": "^0.3.3",
-    "hexo-server": "^0.3.3",
-    "node-normalize-scss": "^8.0.0"
+    "hexo-server": "^0.3.3"
   },
   "scripts": {
+    "build": "hexo generate",
+    "deploy": "hexo deploy",
     "start": "hexo server"
   }
 }

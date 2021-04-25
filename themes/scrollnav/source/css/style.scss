@@ -1,5 +1,3 @@
-@import 'node-normalize-scss/_normalize';
-
 @function em($target-unit, $base-unit) {
   @return $target-unit / $base-unit * 1em;
 }
@@ -22,14 +20,14 @@ $color-bg-light: #e8eaf3;
 $color-bg-lighter: #f5f6fb;
 $color-divider: #c8cfd6;
 
-$base-font-size: 19px;
+$base-font-size: 16px;
 $base-spacing-unit: 10px;
 
-$size-i: 34px;
-$size-ii: 28px;
-$size-iii: 24px;
-$size-iv: $base-font-size;
-$size-v: 16px;
+$size-i: 30px;
+$size-ii: 25px;
+$size-iii: 21px;
+$size-iv: 18px;
+$size-v: $base-font-size;
 $size-vi: 14px;
 
 @import '_base/_headings';
@@ -37,12 +35,50 @@ $size-vi: 14px;
 @import '_base/_lists';
 
 
+@use "variables" as *;
+@use "util/unit";
+
+/* Allows full height background colors other than white */
+html,
+body,
+#root {
+    height: 100%;
+}
 
 html {
+  box-sizing: border-box;
   color: $color-text-regular;
   font-family: 'Lato', sans-serif;
   font-size: $base-font-size;
   font-weight: 400;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+// Set box-sizing globally to handle padding and border widths
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+// Default body styles
+body {
+  background: white;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+img {
+  // Get rid of gap under images by making them display: block by default
+  display: block;
+
+  // Grid defaults to get images and embeds to work properly
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  max-width: 100%;
+  vertical-align: middle;
 }
 
 code {
@@ -62,6 +98,10 @@ code[class*="language-"],
 pre[class*="language-"] {
   font-family: 'Menlo', monospace !important;
   background-color: $color-bg-lighter !important;
+}
+
+strong {
+  font-weight: 700;
 }
 
 .wrapper {
@@ -118,7 +158,7 @@ pre[class*="language-"] {
     margin-right: 0.2em;
   }
   strong {
-    font-weight: 700;
+    font-weight: 900;
   }
 }
 
@@ -133,7 +173,7 @@ pre[class*="language-"] {
 .site-nav__link {
   display: block;
   font-size: em($size-v, $base-font-size);
-  font-weight: 400;
+  font-weight: 700;
   padding: em(10px, $size-v) em(15px, $size-v);
   text-decoration: none;
 
@@ -203,14 +243,15 @@ pre[class*="language-"] {
 }
 
 .sidebar__heading {
-  font-size: em($size-iii, $base-font-size);
+  font-size: em($size-iv, $base-font-size);
+  font-weight: 900;
   margin: 0;
 }
 
 .sidebar__small {
   color: $color-text-dark;
   font-size: $size-vi;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.45;
 }
 
@@ -308,6 +349,7 @@ pre[class*="language-"] {
   border-radius: 4px;
   color: #fff;
   display: inline-block;
+  font-weight: 700;
   padding: 10px 25px;
   text-align: center;
   text-decoration: none;
@@ -452,6 +494,7 @@ pre[class*="language-"] {
 
   .btn {
     display: block;
+    font-size: $size-iv;
     min-width: 180px;
 
     @media screen and (min-width: em(830px, $size-v)) {
@@ -461,6 +504,7 @@ pre[class*="language-"] {
 }
 
 .home-features {
+  font-size: em($size-iv, $base-font-size);
   padding-top: 80px;
   padding-bottom: 60px;
   border-bottom: 1px solid $color-divider;
@@ -570,5 +614,6 @@ pre[class*="language-"] {
 
   .btn {
     display: block;
+    font-size: $size-iv;
   }
 }
