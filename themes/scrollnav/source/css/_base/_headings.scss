@@ -8,14 +8,39 @@
  * This allows us to apply, say, `class=alpha` to a `h3`; a double-stranded
  * heading hierarchy.
  */
-h1, h2, h3, h4, h5, h6 {
+h1,
+.heading-1,
+h2,
+.heading-2,
+h3,
+.heading-3,
+h4,
+.heading-4,
+h5,
+.heading-5,
+h6,
+.heading-6 {
   color: $color-text-dark;
-  font-weight: 400;
   line-height: 1.1;
 }
 
-h1 {
+h2,
+.heading-2,
+h3,
+.heading-3,
+h4,
+.heading-4,
+h5,
+.heading-5,
+h6,
+.heading-6  {
+  font-weight: 700;
+}
+
+h1,
+.heading-1 {
   font-size: em($size-i, $base-font-size);
+  font-weight: 900;
   margin-bottom: em($base-spacing-unit * 2, $size-i);
 
   p + &,
@@ -25,7 +50,8 @@ h1 {
   }
 }
 
-h2 {
+h2,
+.heading-2 {
   font-size: em($size-ii, $base-font-size);
   margin-bottom: em($base-spacing-unit * 2, $size-ii);
 
@@ -36,7 +62,8 @@ h2 {
   }
 }
 
-h3 {
+h3,
+.heading-3 {
   font-size: em($size-iii, $base-font-size);
   margin-bottom: em($base-spacing-unit * 2, $size-iii);
 
@@ -47,7 +74,8 @@ h3 {
   }
 }
 
-h4 {
+h4,
+.heading-4 {
   font-size: em($size-iv, $base-font-size);
   margin-bottom: em($base-spacing-unit * 2, $size-iv);
 
@@ -58,7 +86,8 @@ h4 {
   }
 }
 
-h5 {
+h5,
+.heading-5 {
   font-size: em($size-v, $base-font-size);
   margin-bottom: em($base-spacing-unit * 2, $size-v);
 
@@ -69,7 +98,8 @@ h5 {
   }
 }
 
-h6 {
+h6,
+.heading-6 {
   font-size: em($size-vi, $base-font-size);
   margin-bottom: em($base-spacing-unit * 2, $size-vi);
 
