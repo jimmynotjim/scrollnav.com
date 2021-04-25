@@ -39,8 +39,6 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-highlight:
-  enable: false
 
 marked:
   gfm: true
@@ -50,10 +48,13 @@ marked:
   autolink: true
   modifyAnchors: 1
 
-prism_plugin:
-  mode: 'preprocess'
-  theme: 'base16-ateliersulphurpool.light'
-  #custom_css: 'path/to/your/custom.css'
+highlight:
+  enable: true
+  auto_detect: false
+  line_number: false
+  tab_replace: '  '
+  wrap: false
+  hljs: false
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')

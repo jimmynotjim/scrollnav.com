@@ -73,9 +73,16 @@ img {
   vertical-align: middle;
 }
 
+pre {
+  background-color: $color-bg-lighter;
+  font-family: 'Menlo', monospace !important;
+  padding: 15px 20px;
+  overflow-x: auto;
+}
+
 code {
+  font-size: $size-vi;
   font-family: 'Menlo', monospace;
-  font-size: 13px;
 
   p & {
     background-color: $color-bg-lighter;
@@ -86,10 +93,16 @@ code {
   }
 }
 
-code[class*="language-"],
-pre[class*="language-"] {
-  font-family: 'Menlo', monospace !important;
-  background-color: $color-bg-lighter !important;
+.highlight {
+  .name {
+    color: #3d8fd1;
+  }
+  .attr {
+    color: #c76b29;
+  }
+  .string {
+    color: #ac9739;
+  }
 }
 
 strong {

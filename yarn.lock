@@ -588,15 +588,6 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-clipboard@^1.5.5:
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/clipboard/-/clipboard-1.7.1.tgz#360d6d6946e99a7a1fef395e42ba92b5e9b5a16b"
-  integrity sha1-Ng1taUbpmnof7zleQrqStem1oWs=
-  dependencies:
-    good-listener "^1.2.2"
-    select "^1.1.2"
-    tiny-emitter "^2.0.0"
-
 clipboard@^2.0.0:
   version "2.0.8"
   resolved "https://registry.yarnpkg.com/clipboard/-/clipboard-2.0.8.tgz#ffc6c103dd2967a83005f3f61976aa4655a4cdba"
@@ -915,11 +906,6 @@ detect-file@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/detect-file/-/detect-file-1.0.0.tgz#f0d66d03672a825cb1b73bdb3fe62310c8e552b7"
   integrity sha1-8NZtA2cqglyxtzvbP+YjEMjlUrc=
-
-dir-resolve@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/dir-resolve/-/dir-resolve-1.0.2.tgz#73946fdfe466af31c18dd75652e9c2c300e0651c"
-  integrity sha1-c5Rv3+RmrzHBjddWUunCwwDgZRw=
 
 dom-serializer@^1.0.1:
   version "1.3.1"
@@ -1557,7 +1543,7 @@ hexo-front-matter@^2.0.0:
   dependencies:
     js-yaml "^3.13.1"
 
-hexo-fs@^0.2.0, hexo-fs@^0.2.1:
+hexo-fs@^0.2.0:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/hexo-fs/-/hexo-fs-0.2.3.tgz#c3a81b46e457dfafc56d87c78ef114104f4a3e41"
   integrity sha512-rLB1rMVUW3csAljvJgHfyjemL0BrmcUZfBf9hJe6S0pA53igFa3ON0PFwomvoLs1Wdmjs9Awnw9Tru4PjWFSlQ==
@@ -1636,17 +1622,6 @@ hexo-pagination@0.0.2:
   integrity sha1-jPRwx9sN5bGKOSanbesZQBXffys=
   dependencies:
     utils-merge "^1.0.0"
-
-hexo-prism-plugin@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/hexo-prism-plugin/-/hexo-prism-plugin-2.3.0.tgz#63e2d5d604dc0d89b3f55a4db344f96fe689cca6"
-  integrity sha512-jn8aSVwo8odrZpf2qgETiZeO6cR7D7uDvljHD+CQqWOP97e8LvYAwaFlEvTgJwwKSERZbI5RlwtTOX7CDjz1Mw==
-  dependencies:
-    dir-resolve "^1.0.2"
-    hexo-fs "^0.2.1"
-    node-prismjs "^0.1.0"
-    prism-themes "^1.0.0"
-    prismjs "^1.6.0"
 
 hexo-renderer-ejs@^0.3.1:
   version "0.3.1"
@@ -2503,13 +2478,6 @@ node-gyp@^3.8.0:
     tar "^2.0.0"
     which "1"
 
-node-prismjs@^0.1.0:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/node-prismjs/-/node-prismjs-0.1.2.tgz#dbfbc62d2210e1649d9dd8a6c6a2d7d6ca99a0f9"
-  integrity sha512-WKb6ZbUlPWarzS8jR2UdIbV4lYpt6sOTkIx3u5Ldz55K1Zzs982KyF6aj1zjZbrrx/UGZSZ1e0j28lIzcm3ceg==
-  dependencies:
-    prismjs "~1.6.0"
-
 node-releases@^1.1.71:
   version "1.1.71"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.71.tgz#cb1334b179896b1c89ecfdd4b725fb7bbdfc7dbb"
@@ -2915,24 +2883,12 @@ pretty-hrtime@^1.0.3:
   resolved "https://registry.yarnpkg.com/pretty-hrtime/-/pretty-hrtime-1.0.3.tgz#b7e3ea42435a4c9b2759d99e0f201eb195802ee1"
   integrity sha1-t+PqQkNaTJsnWdmeDyAesZWALuE=
 
-prism-themes@^1.0.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/prism-themes/-/prism-themes-1.6.0.tgz#3bdb4f0780588a4abd770f70537e5cc4898198d1"
-  integrity sha512-L7pbxbUvFj8bVIWpcHCwDFOykhozk6Dja9sxqdcFCWwUI77tSFsWE7imf9OQQAmezLNLaBxRlXNcD2k0VCE/0w==
-
-prismjs@^1.17.1, prismjs@^1.6.0:
+prismjs@^1.17.1:
   version "1.23.0"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.23.0.tgz#d3b3967f7d72440690497652a9d40ff046067f33"
   integrity sha512-c29LVsqOaLbBHuIbsTxaKENh1N2EQBOHaWv7gkHN4dgRbxSREqDnDbtFJYdpPauS4YCplMSNCABQ6Eeor69bAA==
   optionalDependencies:
     clipboard "^2.0.0"
-
-prismjs@~1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.6.0.tgz#118d95fb7a66dba2272e343b345f5236659db365"
-  integrity sha1-EY2V+3pm26InLjQ7NF9SNmWds2U=
-  optionalDependencies:
-    clipboard "^1.5.5"
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
