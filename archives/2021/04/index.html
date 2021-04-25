@@ -1,0 +1,278 @@
+<!doctype html>
+
+<!--[if lt IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie10 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    scrollnav.js
+  </title>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="scrollnav.js">
+<meta property="og:url" content="http://scrollnav.com/archives/2021/04/index.html">
+<meta property="og:site_name" content="scrollnav.js">
+<meta property="og:locale">
+<meta property="article:author" content="James Wilson">
+<meta name="twitter:card" content="summary">
+
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet"> 
+
+  
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-33078147-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-33078147-3');
+  </script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-base16-ateliersulphurpool.light.css" type="text/css"></head>
+
+
+  <body>
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-logo site-header__logo" href="/">
+      <svg class="scrollnav-mark" fill="currentColor" height="1.2em" width="1.2em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m8.45810435 1.21816105c-.98829768-.35971094-2.08107458.1498593-2.44078552 1.13815698l-4.79915778 13.18557767c-.35971094.9882976.1498593 2.0810745 1.13815698 2.4407855l13.18557767 4.7991577c.9882976.359711 2.0810745-.1498593 2.4407855-1.1381569l4.7991577-13.18557765c.359711-.98829768-.1498593-2.08107458-1.1381569-2.44078552zm.37707668-1.03600967 13.18557767 4.79915778c1.56047.56796464 2.3650546 2.29340185 1.7970899 3.85387187l-4.7991578 13.18557767c-.5679646 1.56047-2.2934018 2.3650546-3.8538718 1.7970899l-13.18557765-4.7991578c-1.56047002-.5679646-2.36505461-2.2934018-1.79708997-3.8538718l4.79915778-13.18557765c.56796464-1.56047002 2.29340185-2.36505461 3.85387187-1.79708997zm7.70586987 16.35889952c-2.4374571 2.4374572-6.389356 2.4374572-8.82681315 0-2.43745715-2.4374571-2.43745715-6.389356 0-8.82681315s6.38935605-2.43745715 8.82681315 0c2.4374572 2.43745715 2.4374572 6.38935605 0 8.82681315zm-.8024375-.8024375c1.9942831-1.9942832 1.9942831-5.227655 0-7.22193809-1.9942832-1.99428312-5.227655-1.99428312-7.22193809 0-1.99428312 1.99428309-1.99428312 5.22765489 0 7.22193809 1.99428309 1.9942831 5.22765489 1.9942831 7.22193809 0zm-3.103463-7.26705736 1.7011676 3.40233526c.0798707.1597412.0798707.3477648 0 .5075061l-1.7011676 3.4023352c-.209104.418208-.8059081.418208-1.0150121 0l-1.70116767-3.4023352c-.07987062-.1597413-.07987062-.3477649 0-.5075061l1.70116767-3.40233526c.209104-.418208.8059081-.418208 1.0150121 0zm-1.5742911 3.65608826 1.066785 2.1335701 1.0667851-2.1335701-1.0667851-2.13357004z"/></svg>
+
+      <span class="site-logo__text"><strong>scrollnav</strong>.js</span>
+    </a>
+    <nav class="site-nav">
+      <ul class="unstyled-list site-nav__list">
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="/guide/">Guide</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" target="_blank" rel="noopener" href="https://codepen.io/collection/XPjqyK/">Examples</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="/#contribute">Contribute</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main class="container
+                 false
+                 false
+                 
+                 wrapper"
+    >
+      <section class="home-hero wrapper">
+  <div class="home-hero__logo">
+    <div class="site-logo">
+      <svg class="scrollnav-mark" fill="currentColor" height="1.2em" width="1.2em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m8.45810435 1.21816105c-.98829768-.35971094-2.08107458.1498593-2.44078552 1.13815698l-4.79915778 13.18557767c-.35971094.9882976.1498593 2.0810745 1.13815698 2.4407855l13.18557767 4.7991577c.9882976.359711 2.0810745-.1498593 2.4407855-1.1381569l4.7991577-13.18557765c.359711-.98829768-.1498593-2.08107458-1.1381569-2.44078552zm.37707668-1.03600967 13.18557767 4.79915778c1.56047.56796464 2.3650546 2.29340185 1.7970899 3.85387187l-4.7991578 13.18557767c-.5679646 1.56047-2.2934018 2.3650546-3.8538718 1.7970899l-13.18557765-4.7991578c-1.56047002-.5679646-2.36505461-2.2934018-1.79708997-3.8538718l4.79915778-13.18557765c.56796464-1.56047002 2.29340185-2.36505461 3.85387187-1.79708997zm7.70586987 16.35889952c-2.4374571 2.4374572-6.389356 2.4374572-8.82681315 0-2.43745715-2.4374571-2.43745715-6.389356 0-8.82681315s6.38935605-2.43745715 8.82681315 0c2.4374572 2.43745715 2.4374572 6.38935605 0 8.82681315zm-.8024375-.8024375c1.9942831-1.9942832 1.9942831-5.227655 0-7.22193809-1.9942832-1.99428312-5.227655-1.99428312-7.22193809 0-1.99428312 1.99428309-1.99428312 5.22765489 0 7.22193809 1.99428309 1.9942831 5.22765489 1.9942831 7.22193809 0zm-3.103463-7.26705736 1.7011676 3.40233526c.0798707.1597412.0798707.3477648 0 .5075061l-1.7011676 3.4023352c-.209104.418208-.8059081.418208-1.0150121 0l-1.70116767-3.4023352c-.07987062-.1597413-.07987062-.3477649 0-.5075061l1.70116767-3.40233526c.209104-.418208.8059081-.418208 1.0150121 0zm-1.5742911 3.65608826 1.066785 2.1335701 1.0667851-2.1335701-1.0667851-2.13357004z"/></svg>
+
+      <span class="site-logo__text"><strong>scrollnav</strong>.js</span>
+    </div>
+  </div>
+  <p class="home-hero__description">
+    A small, dependency free JavaScript plugin for auto generating and
+    tracking single page navigation (aka a Table of Contents)
+  </p>
+  <ul class="home-hero__links unstyled-list">
+    <li>
+      <a class="btn btn--outline btn--white" href="/guide/installing.html">
+        Get started
+      </a>
+    </li>
+    <li>
+      <a class="btn btn--outline btn--white" target="_blank" rel="noopener" href="https://codepen.io/collection/XPjqyK/">
+        View the demos
+      </a>
+    </li>
+  </ul>
+</section>
+<section class="home-features wrapper">
+  <h2 class="home-features__heading">Features</h2>
+  <ul class="home-features__list unstyled-list">
+    <li>
+        <svg height="72" viewBox="0 0 76 72" width="76" xmlns="http://www.w3.org/2000/svg"><path d="m72 66.5874c0 .999-.8154 1.8126-1.8072 1.8126h-64.7856c-1.0008 0-1.8072-.8064-1.8072-1.8126v-39.5874-7.2-1.8h5.4 10.8 5.4 5.4 22.608 18.792v9zm-66.5928-62.9874h3.5928 10.8 5.4 5.4 39.5928c.9954 0 1.7982.801 1.8054 1.8 0 .0036.0018.0072.0018.0126v8.9874h-41.4-5.4-5.4-10.8-5.4v-8.9874c0-.0054.0018-.009.0018-.0126.0072-.9918.8172-1.8 1.8054-1.8zm70.191 1.8c0 .0036.0018.009.0018.0126v21.5874 39.5874c0 2.9898-2.43 5.4126-5.4072 5.4126h-64.7856c-2.9862 0-5.4072-2.4174-5.4072-5.4126v-39.5874-7.2-14.3874c0-.0036.0018-.009.0018-.0126.0054-2.3454 1.5138-4.3218 3.5982-5.067.567-.2034 1.17-.333 1.8072-.333h3.5928 10.8 5.4 5.4 39.5928c2.9826 0 5.3982 2.4102 5.4054 5.4zm-66.5982 5.39964c.9954 0 1.8-.8046 1.8-1.8s-.8046-1.8-1.8-1.8-1.8.8046-1.8 1.8.8046 1.8 1.8 1.8zm5.4 0c.9954 0 1.8-.8046 1.8-1.8s-.8046-1.8-1.8-1.8-1.8.8046-1.8 1.8.8046 1.8 1.8 1.8zm5.4 0c.9954 0 1.8-.8046 1.8-1.8s-.8046-1.8-1.8-1.8-1.8.8046-1.8 1.8.8046 1.8 1.8 1.8zm33.6726 20.3274c-.0792-.0774-.1782-.1152-.2646-.1764-.702-.4842-1.656-.45-2.2806.1764-.7038.7038-.7038 1.8414 0 2.5452l2.2806 2.2806 5.346 5.346-5.346 5.3496-2.2806 2.2806c-.7038.7002-.7038 1.8414 0 2.5452.6246.6228 1.5786.6624 2.2806.1746.0864-.0594.1854-.0954.2646-.1746l8.901-8.9028c.7038-.702.7038-1.8414 0-2.5452zm-10.40976-5.80428c-.5796-.2268-1.1862-.1044-1.6632.225-.2844.1962-.5346.45-.6696.7956l-.2556.657-6.075 15.5196-5.4756 13.9968c-.3636.9252.0936 1.9692 1.0206 2.331s1.971-.0954 2.3328-1.0188l2.1222-5.4288 7.0002-17.8902 2.682-6.8544c.0846-.216.1152-.4374.1152-.6552 0-.72-.423-1.4004-1.134-1.6776zm-18.18972 8.34948c.7038-.7038.7038-1.8414 0-2.5452s-1.8414-.7038-2.5452 0l-2.5272 2.5272-6.3738 6.372c-.7038.7038-.7038 1.8432 0 2.5452l6.3738 6.3738 2.5272 2.529c.7038.702 1.8414.702 2.5452 0 .7038-.7038.7038-1.845 0-2.5452l-5.0724-5.0742-2.556-2.556 2.556-2.5542z" fill="#35bba1" fill-rule="evenodd"/></svg>
+      <h3>
+        Simple setup
+      </h3>
+      <p>
+        Pass your page’s content to scrollnav and it will generate the
+        navigation and track scrolling automatically.
+      </p>
+    </li>
+    <li>
+        <svg height="72" viewBox="0 0 72 72" width="72" xmlns="http://www.w3.org/2000/svg"><path d="m59.8927933 66.0996645 6.3053929-6.3037051 1.8919554 8.1956605zm-21.4562257-20.600542-2.3864629-2.386463-7.1610765-7.1610765-2.3864629-2.3864629-14.7727794-14.7727793 7.1593888-7.1610765 14.7727793 14.7727793 2.3881507 2.3864629 7.1593888 7.1610765 2.3864629 2.386463 18.6427648 18.6427648-7.1593888 7.1610765zm-23.6570373 18.8824237-5.65561335 2.4235932-3.92905636-3.9290563 2.42528092-5.6589889 18.88073599-18.8790482 7.1610765 7.1610765zm-10.2209473-52.7604084c-.64809177-.6497795-.64640403-1.71980598.01012643-2.37802419l4.77292585-4.77292584c.66328142-.66159368 1.72318152-.66328142 2.37802422-.01012644l4.7830523 4.78305228-7.16107652 7.16107649zm51.5317344-2.87084397 7.1610765 7.15938877-17.6554375 17.6554375-7.1593888-7.1627642zm8.9534553-5.37376092c.0050632-.00337548 3.5712557 3.5763189 3.5712557 3.5763189.0101264.01012644-4.7661749 4.77967679-4.7661749 4.77967679l-3.5796944-3.57969437zm3.9695621 53.60427789-21.0292277-21.0292278 14.0284864-14.0284864 1.3147487 1.3164364c.6599059.659906.6599059 1.7282447-.0033755 2.3915262l-6.6226878 6.621c-.6582182.6599059-.6582182 1.7282447 0 2.3864629.659906.659906 1.7282447.659906 2.3864629 0l6.6226878-6.6193123c1.9814056-1.9814056 1.9830933-5.1881096.0050632-7.1661397l-1.3164364-1.3164364 1.2388004-1.2404882 2.386463-2.3864629-1.7890034-1.7890033 4.7763014-4.77630135c1.3248751-1.32825058 1.3113731-3.45648944-.0101265-4.7796768l-3.5661925-3.56619247c-1.3350015-1.33500154-3.4615526-1.32487511-4.777989-.0084387l-4.7763013 4.77630133-1.7906911-1.79069106-2.3864629 2.38646292-17.6537498 17.65374973-21.9439823-21.94229449c-1.9763423-1.97465461-5.17291996-1.96790365-7.15095005.01012643l-4.77292584 4.77292585c-1.97127914 1.97127913-1.98309331 5.17967091-.01012644 7.15095011l4.78305228 4.7830522.45568953.4556896 1.9307734 1.9324611 14.77277932 14.7727793-19.34148875 19.3414888-3.57969439 8.354308 2.38646293 2.3864629-3.57969439 3.5796944 2.38646292 2.3864629 3.57969439-3.5796944 2.38815066 2.3864629 8.35430793-3.5796943 19.3414888-19.3414888 18.6410771 18.6427648 2.3864629 2.3864629 12.2259812 2.8218996c1.8025052.4151838 2.9501677-.7156013 2.5299207-2.5316085z" fill="#9035bb" fill-rule="evenodd"/></svg>
+      <h3>
+        Fully customizable
+      </h3>
+      <p>
+        All the styling is up to you, make scrollnav look and behave
+        however works best for your project.
+      </p>
+    </li>
+    <li>
+        <svg height="72" viewBox="0 0 72 72" width="72" xmlns="http://www.w3.org/2000/svg"><path d="m38.25 33.1323017c5.5207256.8428839 9.75 5.6113911 9.75 11.3676983 0 6.3512746-5.1487254 11.5-11.5 11.5s-11.5-5.1487254-11.5-11.5c0-5.7563072 4.2292744-10.5248144 9.75-11.3676983v-11.3823017c0-.9664983.7835017-1.75 1.75-1.75s1.75.7835017 1.75 1.75zm30.2036881 4.6176983h-4.7036881c-.9664983 0-1.75-.7835017-1.75-1.75s.7835017-1.75 1.75-1.75h4.7036881c-.4084045-7.6971151-3.4949409-14.6837635-8.3448192-20.0451604l-3.3965583 3.3965583c-.6834175.6834175-1.7914562.6834175-2.4748737 0s-.6834175-1.7914562 0-2.4748737l3.3879208-3.3879209c-5.2216575-4.65759769-11.9565048-7.65463744-19.3753577-8.16193512v4.67333182c0 .96649831-.7835017 1.75-1.75 1.75s-1.75-.78350169-1.75-1.75v-4.72640403c-7.853732.29700444-14.9939942 3.38084614-20.4604001 8.29113023l3.311798 3.311798c.6834175.6834175.6834175 1.7914562 0 2.4748737s-1.7914562.6834175-2.4748737 0l-3.311798-3.311798c-4.80587946 5.3501767-7.86216006 12.303786-8.26841431 19.9604001h4.95368811c.96649831 0 1.75.7835017 1.75 1.75s-.78350169 1.75-1.75 1.75h-4.95368811c.90920023 17.1355631 15.09153311 30.75 32.45368811 30.75s31.5444879-13.6144369 32.4536881-30.75zm-32.4536881 34.25c-19.882251 0-36-16.117749-36-36s16.117749-36 36-36 36 16.117749 36 36-16.117749 36-36 36zm.5-19.5c4.418278 0 8-3.581722 8-8s-3.581722-8-8-8-8 3.581722-8 8 3.581722 8 8 8z" fill="#eda640"/></svg>
+        <h3>
+          Lightning fast
+        </h3>
+        <p>
+          Damn right it's fast! At 2.4kb and zero dependencies scrollnav
+          is pretty unintrusive.
+        </p>
+    </li>
+  </ul>
+</section>
+
+<section class="home-contribute wrapper">
+  <h2 class="home-contribute__heading" id="contribute">Contribute</h2>
+  <div class="home-contribute__content">
+    <p class="home-contribute__description">
+      scrollnav.js depends on the contributions of the Open Source Community,
+      both directly to the codebase and monetarily. If you’re interested in
+      supporting this project, please consider lending a hand or making a
+      donation.
+    </p>
+    <ul class="home-contribute__links unstyled-list">
+      <li>
+        <a
+            class="btn btn--outline"
+            target="_blank" rel="noopener" href="https://github.com/jimmynotjim/scrollnav/blob/master/CONTRIBUTING.md"
+        >
+          Lend a hand
+        </a>
+      </li>
+      <li>
+        <a class="btn btn--outline" target="_blank" rel="noopener" href="https://www.paypal.me/jimmynotjim">
+          Make a donation
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <nav class="footer-nav">
+      <section>
+        <h3 class="footer-nav__heading">Guide</h3>
+        <ul class="unstyled-list">
+          
+            <li class="footer-nav__item">
+              <a href="/guide/index.html"
+                 class="footer-nav__link">
+                Overview
+              </a>
+            </li>
+          
+            <li class="footer-nav__item">
+              <a href="/guide/installing.html"
+                 class="footer-nav__link">
+                Installing
+              </a>
+            </li>
+          
+            <li class="footer-nav__item">
+              <a href="/guide/setup.html"
+                 class="footer-nav__link">
+                Setup
+              </a>
+            </li>
+          
+            <li class="footer-nav__item">
+              <a href="/guide/styling.html"
+                 class="footer-nav__link">
+                Styling
+              </a>
+            </li>
+          
+            <li class="footer-nav__item">
+              <a href="/guide/customizing.html"
+                 class="footer-nav__link">
+                Customizing
+              </a>
+            </li>
+          
+        </ul>
+      </section>
+      <section>
+        <h3 class="footer-nav__heading">Resources</h3>
+        <ul class="unstyled-list">
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" target="_blank" rel="noopener" href="https://codepen.io/collection/XPjqyK/">
+              View the demos
+            </a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" target="_blank" rel="noopener" href="https://stackoverflow.com/search?tab=newest&q=scrollnav.js">
+              Get some help
+            </a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" target="_blank" rel="noopener" href="https://github.com/jimmynotjim/scrollnav/issues/new">
+              Report an issue
+            </a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" target="_blank" rel="noopener" href="https://github.com/jimmynotjim/scrollnav">
+              View the source code
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3 class="footer-nav__heading">More</h3>
+        <ul class="unstyled-list">
+          <li class="footer-nav__item">
+              <a class="footer-nav__link" target="_blank" rel="noopener" href="https://github.com/jimmynotjim/scrollnav/blob/master/CONTRIBUTING.md">
+                Lend a hand
+            </a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" target="_blank" rel="noopener" href="https://www.paypal.me/jimmynotjim">
+              Make a donation
+            </a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" target="_blank" rel="noopener" href="https://github.com/jimmynotjim/scrollnav.com">
+              View this docsite's source code
+            </a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="/v2/">
+              View the v2 documentation
+            </a>
+          </li>
+        </ul>
+      </section>
+    </nav>
+    <div class="footer-meta">
+      <p>scrollnav.js is built and maintained by James Wilson <a target="_blank" rel="noopener" href="https://github.com/jimmynotjim/">(@jimmynotjim)</a></p>
+      <p>Copyright 2012-2018, released under <a target="_blank" rel="noopener" href="https://opensource.org/licenses/MIT">the MIT license</a></p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+  </body>
+
+</html>

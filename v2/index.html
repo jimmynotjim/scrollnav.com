@@ -1,0 +1,382 @@
+<!doctype html>
+
+<!--[if lt IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie10 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    v2 documentation | scrollnav.js
+  </title>
+
+  <meta name="description" content="This documentation is for an older version of scrollNav and provided for   reference only. Version 2 is no longer supported and I highly recommend   upgrading to Version 3.   Getting StartedInstall">
+<meta property="og:type" content="website">
+<meta property="og:title" content="v2 documentation">
+<meta property="og:url" content="http://scrollnav.com/v2/index.html">
+<meta property="og:site_name" content="scrollnav.js">
+<meta property="og:description" content="This documentation is for an older version of scrollNav and provided for   reference only. Version 2 is no longer supported and I highly recommend   upgrading to Version 3.   Getting StartedInstall">
+<meta property="og:locale">
+<meta property="article:published_time" content="2021-04-25T14:16:39.120Z">
+<meta property="article:modified_time" content="2021-04-25T14:16:39.120Z">
+<meta property="article:author" content="James Wilson">
+<meta name="twitter:card" content="summary">
+
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet"> 
+
+  
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-33078147-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-33078147-3');
+  </script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-base16-ateliersulphurpool.light.css" type="text/css"></head>
+
+
+  <body>
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-logo site-header__logo" href="/">
+      <svg class="scrollnav-mark" fill="currentColor" height="1.2em" width="1.2em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m8.45810435 1.21816105c-.98829768-.35971094-2.08107458.1498593-2.44078552 1.13815698l-4.79915778 13.18557767c-.35971094.9882976.1498593 2.0810745 1.13815698 2.4407855l13.18557767 4.7991577c.9882976.359711 2.0810745-.1498593 2.4407855-1.1381569l4.7991577-13.18557765c.359711-.98829768-.1498593-2.08107458-1.1381569-2.44078552zm.37707668-1.03600967 13.18557767 4.79915778c1.56047.56796464 2.3650546 2.29340185 1.7970899 3.85387187l-4.7991578 13.18557767c-.5679646 1.56047-2.2934018 2.3650546-3.8538718 1.7970899l-13.18557765-4.7991578c-1.56047002-.5679646-2.36505461-2.2934018-1.79708997-3.8538718l4.79915778-13.18557765c.56796464-1.56047002 2.29340185-2.36505461 3.85387187-1.79708997zm7.70586987 16.35889952c-2.4374571 2.4374572-6.389356 2.4374572-8.82681315 0-2.43745715-2.4374571-2.43745715-6.389356 0-8.82681315s6.38935605-2.43745715 8.82681315 0c2.4374572 2.43745715 2.4374572 6.38935605 0 8.82681315zm-.8024375-.8024375c1.9942831-1.9942832 1.9942831-5.227655 0-7.22193809-1.9942832-1.99428312-5.227655-1.99428312-7.22193809 0-1.99428312 1.99428309-1.99428312 5.22765489 0 7.22193809 1.99428309 1.9942831 5.22765489 1.9942831 7.22193809 0zm-3.103463-7.26705736 1.7011676 3.40233526c.0798707.1597412.0798707.3477648 0 .5075061l-1.7011676 3.4023352c-.209104.418208-.8059081.418208-1.0150121 0l-1.70116767-3.4023352c-.07987062-.1597413-.07987062-.3477649 0-.5075061l1.70116767-3.40233526c.209104-.418208.8059081-.418208 1.0150121 0zm-1.5742911 3.65608826 1.066785 2.1335701 1.0667851-2.1335701-1.0667851-2.13357004z"/></svg>
+
+      <span class="site-logo__text"><strong>scrollnav</strong>.js</span>
+    </a>
+    <nav class="site-nav">
+      <ul class="unstyled-list site-nav__list">
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="/guide/">Guide</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" target="_blank" rel="noopener" href="https://codepen.io/collection/XPjqyK/">Examples</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="/#contribute">Contribute</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main class="container
+                 false
+                 container--has-sidebar
+                 
+                 wrapper"
+    >
+      
+  <div class="sidebar">
+  <div class="sidebar__inner">
+    <header class="sidebar__header">
+      <h2 class="sidebar__heading">
+        v2 Docs
+      </h2>
+      <span class="sidebar__small">
+        Ver.
+        2.7.3
+      </span>
+    </header>
+    
+
+  </div>
+</div>
+
+
+
+<article class="article article-type-page"
+         id="page-v2-documentation"
+         itemscope
+         itemprop="blogPost">
+
+  <div class="article-meta">
+    
+    
+  </div>
+
+  <div class="article-inner">
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      v2 documentation
+    </h1>
+  
+
+
+      </header>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-note">
+  This documentation is for an older version of scrollNav and provided for
+  reference only. Version 2 is no longer supported and I highly recommend
+  upgrading to Version 3.
+</p>
+
+<h2 id="getting-started"><a href="#getting-started" class="headerlink" title="Getting Started"></a>Getting Started</h2><p>Install with Bower <code>bower install scrollNav</code></p>
+<p>Or download the latest <a href="https://github.com/jimmynotjim/scrollNav/archive/v2.7.3.zip" target="_blank" rel="noopener">zipped package</a>.</p>
+<h2 id="requirements"><a href="#requirements" class="headerlink" title="Requirements"></a>Requirements</h2><ul>
+<li>For in-page usage <a href="http://jquery.com/" target="_blank" rel="noopener">jQuery 1.8.0</a> or greater and <a href="https://github.com/aFarkas/html5shiv" target="_blank" rel="noopener">html5shiv</a>/<a href="http://modernizr.com/" target="_blank" rel="noopener">modernizr</a> for older browser support</li>
+<li>To build source <a href="http://nodejs.org/" target="_blank" rel="noopener">Node 0.10.0</a> or greater and <a href="http://gruntjs.com/" target="_blank" rel="noopener">grunt 0.4.0</a> or greater</li>
+</ul>
+<h2 id="usage"><a href="#usage" class="headerlink" title="Usage"></a>Usage</h2><h3 id="import"><a href="#import" class="headerlink" title="Import"></a>Import</h3><p>Start by importing the script to your page, the best location is in the footer, but no matter what, make sure it follows your jQuery file.</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>jquery.scrollNav.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+</code></pre>
+<h3 id="build-your-page"><a href="#build-your-page" class="headerlink" title="Build your page"></a>Build your page</h3><p>Include a class or id hook on the element you want to apply the plugin to and include an <code>&lt;h2&gt;</code> for each section you want to inlcude in the navigation.</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>main<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>article</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>post__article<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>post__header<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>post__heading<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>This is the main heading for the article<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>post__sub-heading<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>This is a sub-heading for the article<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Yada yada yada...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>This is a section heading<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>More yada yada...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>Another section heading<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>More more yada...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>article</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
+<h3 id="initialize"><a href="#initialize" class="headerlink" title="Initialize"></a>Initialize</h3><p>Now initialize the plugin with your hook for the article</p>
+<pre><code>$(&#39;.post__article&#39;).scrollNav();
+</code></pre><p>and the plugin scans the article, grabs all the <code>&lt;h2&gt;</code>s, adds them to the navigation list and inserts the list before the article. It’s that easy…well almost.</p>
+<h3 id="styling"><a href="#styling" class="headerlink" title="Styling"></a>Styling</h3><p>To keep the plugin simple there are no styles added to the navigation, that’s all up to you. The nav structure looks like this and includes class names in the <a href="http://bem.info/method/" target="_blank" rel="noopener">BEM Methodology</a> style (for a good overview read <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/" target="_blank" rel="noopener">MindBEMding - getting your head ‘round BEM syntax</a>):</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>scroll-nav<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>scroll-nav__wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>scroll-nav__heading<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>scroll-nav__list<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>scroll-nav__item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>scroll-nav__link<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+</code></pre>
+<p>An <code>active</code> class is attached to the nav item matching the section and sub-section that is the highest within the view bounds. An <code>in-view</code> class is attached to all nav items whose section or sub-section is within the view bounds. If you have short sections at the end of your page and dislike that the last nav itmes are never activated, you can use the <code>in-view</code> hook to style all sections with in the view.</p>
+<p>There are loading hooks added to the body element (similar to how Typekit handles font loading) to allow for css transitions or any other changes in css you’d need. When the plug-in starts <code>sn-loading</code> is added to the body class and is replaced by <code>sn-active</code> when the plugin is successful or <code>sn-failed</code> if it fails.</p>
+<h3 id="destroy-scrollnav"><a href="#destroy-scrollnav" class="headerlink" title="Destroy scrollNav"></a>Destroy scrollNav</h3><p>In addition to the initialization, there is now a destroy method available should you need it. To destroy scrollNav and remove all it’s DOM changes use:</p>
+<pre><code>$(&#39;.post__article&#39;).scrollNav(&#39;destroy&#39;);
+</code></pre><h3 id="reset-positions-on-dom-change"><a href="#reset-positions-on-dom-change" class="headerlink" title="Reset Positions on DOM Change"></a>Reset Positions on DOM Change</h3><p>There are a couple of ways you can reset scrollNav’s positions when the DOM changes:</p>
+<h4 id="manually"><a href="#manually" class="headerlink" title="Manually"></a>Manually</h4><p>Simply call the <code>resetPos</code> method on your own:</p>
+<pre><code>$.fn.scrollNav(&#39;resetPos&#39;);
+</code></pre><h4 id="automatically"><a href="#automatically" class="headerlink" title="Automatically"></a>Automatically</h4><p>Utilize <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver" target="_blank" rel="noopener">mutation observers</a> to call the <code>resetPos</code> method automatically:</p>
+<pre><code>var $;
+var observer_target = document.querySelector(&#39;.post__article&#39;);
+var observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function() {
+    $.fn.scrollNav(&#39;resetPos&#39;);
+  });
+});
+var observer_config = {
+  attributes: true,
+  childList: true,
+  characterData: true,
+  subtree: true
+};
+observer.observe(observer_target, observer_config);
+</code></pre><h2 id="default-options"><a href="#default-options" class="headerlink" title="Default options"></a>Default <code>options</code></h2><p>There are a few customizable options in scrollNav using key : value pairs. These are the defaults.</p>
+<pre><code>$(&#39;.post-article&#39;).scrollNav({
+  sections: &#39;h2&#39;,
+  subSections: false,
+  sectionElem: &#39;section&#39;,
+  className: &#39;scroll-nav&#39;,
+  showHeadline: true,
+  headlineText: &#39;Scroll To&#39;,
+  showTopLink: true,
+  topLinkText: &#39;Top&#39;,
+  fixedMargin: 40,
+  scrollOffset: 40,
+  animated: true,
+  speed: 500,
+  insertTarget: this.selector,
+  insertLocation: &#39;insertBefore&#39;,
+  activeClass: &#39;active&#39;,
+  arrowKeys: false,
+  scrollToHash: true,
+  onInit: null,
+  onRender: null,
+  onDestroy: null
+});
+</code></pre><h3 id="sections"><a href="#sections" class="headerlink" title="Sections"></a>Sections</h3><p>As mentioned, the script automatically searches for <code>&lt;h2&gt;</code>s within the target article. If your page structure differs, feel free to target another selector, like an <code>&lt;h3&gt;</code> or <code>&lt;h4&gt;</code> or even a class, like <code>.scroll-headline</code>.</p>
+<h3 id="sub-sections"><a href="#sub-sections" class="headerlink" title="Sub-Sections"></a>Sub-Sections</h3><p>Set to <code>false</code> by default, the plugin supports nesting sub-sections within each section in the final nav. Available selectors are the same as Sections.</p>
+<h3 id="section-wrapper-element"><a href="#section-wrapper-element" class="headerlink" title="Section Wrapper Element"></a>Section Wrapper Element</h3><p>If your article already contains <code>section</code> tags, you’ll want to change this to <code>&#39;div&#39;</code>. Sub-sections aren’t affected by this option.</p>
+<h3 id="class-name"><a href="#class-name" class="headerlink" title="Class Name"></a>Class Name</h3><p>If you want to change the default <code>scroll-nav</code> class naming used throughout (including in the BEM syntax for the child elems), you can do so by changing this value to your own.</p>
+<h3 id="show-headline"><a href="#show-headline" class="headerlink" title="Show Headline"></a>Show Headline</h3><p>Set this to <code>false</code> to remove the Headline Text entirely.</p>
+<h3 id="headline-text"><a href="#headline-text" class="headerlink" title="Headline Text"></a>Headline Text</h3><p>scrollNav’s default title text is ‘Scroll To’, but feel free to modify it to whatever works for you, like ‘Article Sections’ or ‘Page Navigation’.</p>
+<h3 id="show-top-link"><a href="#show-top-link" class="headerlink" title="Show Top Link"></a>Show Top Link</h3><p>Set this to <code>false</code> to remove the Top Link nav item entirely.</p>
+<h3 id="top-link-text"><a href="#top-link-text" class="headerlink" title="Top Link Text"></a>Top Link Text</h3><p>scrollNav’s default return to the top link text is ‘Top’, but feel free to modify it to whatever works for you.</p>
+<h3 id="fixed-margin"><a href="#fixed-margin" class="headerlink" title="Fixed Margin"></a>Fixed Margin</h3><p>This is the <code>top</code> dimension you set for the <code>.scroll-nav.fixed</code> class, which is applied as the user scrolls down the page and is removed as they scroll above the article. You definitely want to set this if you don’t use the default 40px, otherwise the nav will jump around as the user scrolls past the top of the article.</p>
+<h3 id="scroll-offset"><a href="#scroll-offset" class="headerlink" title="Scroll Offset"></a>Scroll Offset</h3><p>This option affects two things. First is the “active state” boundries within the viewport. The bounderies are within a distance from the top and bottom of the viewport equal to this amount. Second is the destination when animating the page scroll. This will place the heading of the section right at the top of the “active state” boundry.</p>
+<h3 id="animated-scrolling"><a href="#animated-scrolling" class="headerlink" title="Animated Scrolling"></a>Animated Scrolling</h3><p>The plugin animates the page scroll when clicking on a nav link by default. Set this to <code>false</code> if you do not wish to animate the scroll.</p>
+<h3 id="scrolling-speed"><a href="#scrolling-speed" class="headerlink" title="Scrolling Speed"></a>Scrolling Speed</h3><p>Change this to either increase or decrease the animated page scroll speed.</p>
+<h3 id="insertion-target"><a href="#insertion-target" class="headerlink" title="Insertion Target"></a>Insertion Target</h3><p>If you need to insert the nav relative to an element other than the one scrollNav is initialized on, you can change it here.</p>
+<h3 id="insertion-location"><a href="#insertion-location" class="headerlink" title="Insertion Location"></a>Insertion Location</h3><p>You can pass any of the following jQuery insertion methods to change where scrollNav is inserted in relation to the targeted container. <code>insertBefore</code>, <code>prependTo</code>, <code>appendTo</code>, or <code>insertAfter</code></p>
+<h3 id="arrow-key-navigation"><a href="#arrow-key-navigation" class="headerlink" title="Arrow Key Navigation"></a>Arrow Key Navigation</h3><p>Set this to <code>true</code> to allow up/down arrow keys to jump through each section.</p>
+<h3 id="active-class"><a href="#active-class" class="headerlink" title="Active Class"></a>Active Class</h3><p>By default, scrollNav will use the class <code>&quot;.active&quot;</code> to indicate which nav item is currently in view. If you need a different class name, add it here.</p>
+<h3 id="scroll-to-hash"><a href="#scroll-to-hash" class="headerlink" title="Scroll to hash"></a>Scroll to hash</h3><p>Set this to false if you use hashed (<a href="http://example.com/#home" target="_blank" rel="noopener">http://example.com/#home</a>) values for routing.</p>
+<h3 id="callback-functions"><a href="#callback-functions" class="headerlink" title="Callback functions"></a>Callback functions</h3><p>There are three new callback functions that you can utilize to accommodate anything you need to run after specific scrollNav events. They are <code>onInit</code>, <code>onRender</code>, and <code>onDestroy</code>. Add them to your options just like any other and they should look like this:</p>
+<pre><code>$(&#39;.post__article&#39;).scrollNav({
+  onInit: function() {
+    callback actions in here
+  }
+});
+</code></pre><h2 id="errors"><a href="#errors" class="headerlink" title="Errors"></a>Errors</h2><p>The plugin will refuse to build and log an error message if it doesn’t find your desired container, the insertion target or any of the headlines specified within the container. If the nav doesn’t show up on load, check your browser’s console.</p>
+
+      
+
+      
+    </div>
+
+    <footer class="article-footer">
+      Found a mistake or want to help improve this documentation?
+      <a href="https://github.com/jimmynotjim/scrollnav.com/edit/master/source/v2/index.md"
+         target="_blank">Edit this page right from GitHub</a>.
+    </footer>
+  </div>
+
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <nav class="footer-nav">
+      <section>
+        <h3 class="footer-nav__heading">Guide</h3>
+        <ul class="unstyled-list">
+          
+            <li class="footer-nav__item">
+              <a href="/guide/index.html"
+                 class="footer-nav__link">
+                Overview
+              </a>
+            </li>
+          
+            <li class="footer-nav__item">
+              <a href="/guide/installing.html"
+                 class="footer-nav__link">
+                Installing
+              </a>
+            </li>
+          
+            <li class="footer-nav__item">
+              <a href="/guide/setup.html"
+                 class="footer-nav__link">
+                Setup
+              </a>
+            </li>
+          
+            <li class="footer-nav__item">
+              <a href="/guide/styling.html"
+                 class="footer-nav__link">
+                Styling
+              </a>
+            </li>
+          
+            <li class="footer-nav__item">
+              <a href="/guide/customizing.html"
+                 class="footer-nav__link">
+                Customizing
+              </a>
+            </li>
+          
+        </ul>
+      </section>
+      <section>
+        <h3 class="footer-nav__heading">Resources</h3>
+        <ul class="unstyled-list">
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" target="_blank" rel="noopener" href="https://codepen.io/collection/XPjqyK/">
+              View the demos
+            </a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" target="_blank" rel="noopener" href="https://stackoverflow.com/search?tab=newest&q=scrollnav.js">
+              Get some help
+            </a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" target="_blank" rel="noopener" href="https://github.com/jimmynotjim/scrollnav/issues/new">
+              Report an issue
+            </a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" target="_blank" rel="noopener" href="https://github.com/jimmynotjim/scrollnav">
+              View the source code
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3 class="footer-nav__heading">More</h3>
+        <ul class="unstyled-list">
+          <li class="footer-nav__item">
+              <a class="footer-nav__link" target="_blank" rel="noopener" href="https://github.com/jimmynotjim/scrollnav/blob/master/CONTRIBUTING.md">
+                Lend a hand
+            </a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" target="_blank" rel="noopener" href="https://www.paypal.me/jimmynotjim">
+              Make a donation
+            </a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" target="_blank" rel="noopener" href="https://github.com/jimmynotjim/scrollnav.com">
+              View this docsite's source code
+            </a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="/v2/">
+              View the v2 documentation
+            </a>
+          </li>
+        </ul>
+      </section>
+    </nav>
+    <div class="footer-meta">
+      <p>scrollnav.js is built and maintained by James Wilson <a target="_blank" rel="noopener" href="https://github.com/jimmynotjim/">(@jimmynotjim)</a></p>
+      <p>Copyright 2012-2018, released under <a target="_blank" rel="noopener" href="https://opensource.org/licenses/MIT">the MIT license</a></p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="https://rawgit.com/jimmynotjim/scrollNav/v2.7.3/dist/jquery.scrollNav.min.js"></script>
+  <script>
+    $('.article-inner').scrollNav({
+			headlineText: 'scrollnav',
+			fixedMargin: 60,
+			scrollOffset: 80,
+      arrowKeys: false,
+      insertTarget: $('.sidebar__inner'),
+      insertLocation: 'appendTo',
+      showTopLink: false,
+      showHeadline: false,
+      className: 'v2-toc'
+		});
+  </script>
+
+
+  </body>
+
+</html>
