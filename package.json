@@ -25,5 +25,9 @@
     "build": "hexo generate",
     "deploy": "hexo deploy",
     "start": "hexo server"
+  },
+  "volta": {
+    "node": "12.20.0",
+    "yarn": "1.22.10"
   }
 }
